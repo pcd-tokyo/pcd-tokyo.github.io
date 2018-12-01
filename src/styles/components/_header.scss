@@ -1,0 +1,74 @@
+//Layout
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  z-index: 99;
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    a {
+      display: block;
+      width: 30px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .logo_20th {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .navi {
+    .horlist {
+      list-style: none;
+      position: absolute;
+      top: 10px;
+      right: 50px;
+    }
+    .horlist__item {
+      display: inline-block;
+      margin: 0 8px;
+      font-size: 1.2em;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include min-screen($breakpoint-sm) {
+  .header {
+    height: 110px;
+    .logo {
+      top: 20px;
+      left: 20px;
+      a {
+        width: 60px;
+      }
+    }
+    .logo_20th {
+      top: 20px;
+      right: 20px;
+      width: 75px;
+    }
+    .navi {
+      .horlist {
+        top: 36px;
+        right: 120px;
+      }
+      .horlist__item {
+        margin: 0 20px;
+      }
+    }
+  }
+}

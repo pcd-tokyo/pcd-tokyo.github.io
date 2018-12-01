@@ -1,0 +1,194 @@
+//Layout
+nav {
+  display: none;
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  margin: 100px 0 50px;
+}
+@include min-screen($breakpoint-sm) {
+  #map {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.main {
+  #hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #about {
+
+  }
+  #event {
+
+  }
+  #access {
+
+  }
+}
+
+.container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 2%;
+}
+
+.hdg {
+  &__lv2 {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: bold;
+    color: $key-blue;
+    text-align: center;
+  }
+  &__lv3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-weight: bold;
+    background-color: $key-blue;
+    color: $color-base-white;
+    font-size: 45px;
+    line-height: 1.5;
+    &.is-red {
+      background-color: $key-red;
+    }
+  }
+  &__lv4 {
+    font-size: 40px;
+    font-weight: bold;
+    color: $key-red;
+  }
+}
+
+.hero {
+  &__title {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    h1 {
+      color: $key-blue;
+      //font-size: 18.75vw;
+      font-size: 60px;
+      line-height: 1.4;
+    }
+    h2 {
+      color: $key-blue;
+      //font-size: 18.75vw;
+      font-size: 60px;
+      line-height: 1.4;
+      span {
+        //font-size: 21.875vw;
+        font-size: 70px;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+.about {
+  &__title {
+
+  }
+  p {
+
+  }
+}
+
+.timetable {
+  &__lt {
+    ul {
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        p {
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+  &__semminar {
+    ul {
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        p {
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+  &__openarea {
+    color: $key-red;
+    ul {
+      li {
+        .label {
+          position: relative;
+          width: 100%;
+          padding: 15px 20px;
+          background-color: $key-red;
+          display: flex;
+          p {
+            color: $color-base-white;
+            font-size: 20px;
+          }
+          &:after {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            padding: 10px 15px;
+            border: 1px solid $color-base-white;
+            color: $color-base-white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          &.forBeginner {
+            &:after {
+              content: 'Beginner';
+            }
+          }
+          &.forIntermediate {
+            &:after {
+              content: 'Intermediate';
+            }
+          }
+          &.forProfessional {
+            &:after {
+              content: 'Professional';
+            }
+          }
+        }
+        &:nth-child(even){
+          .label {
+            background-color: #f44a5a;
+          }
+        }
+        .content {
+          display: none;
+        }
+      }
+    }
+  }
+}

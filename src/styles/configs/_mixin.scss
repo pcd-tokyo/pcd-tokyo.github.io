@@ -1,0 +1,56 @@
+// Element用のミックスイン  親要素のクラス名を継承してデリミターとして"__"を付与
+@mixin e($name) {
+  @at-root   &__#{$name} {
+    @content;
+  }
+}
+
+// Modifier用のミックスイン  親要素のクラス名を継承してデリミターとして"--"を付与
+@mixin m($name) {
+  @at-root   &--#{$name} {
+    @content;
+  }
+}
+// Breakpoint
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+@function get_vw($size, $viewport:320){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size:14){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+  line-height: get_vw($font_size * 1.4);
+}
+// Clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+// 画像置換
+.hidetext {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

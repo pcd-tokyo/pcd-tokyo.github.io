@@ -1,0 +1,10 @@
+node_modules/
+dist/
+/**/node_modules
+.*
+*.map
+bundle.*
+!.gitignore
+!.babelrc
+npm-debug.log
+node_modules/**
