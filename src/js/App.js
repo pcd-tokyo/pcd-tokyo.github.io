@@ -3,6 +3,7 @@ import setUA from './util/setUaBodyClass';
 import Util from './Util.js';
 
 import Map from './_map';
+import P5Sketch from './P5Sketch'
 
 // Application entry point
 $(()=>{
@@ -18,4 +19,6 @@ $(()=>{
     return false;
   });
 
+  //
+  window.p5 = P5Sketch();
 });
