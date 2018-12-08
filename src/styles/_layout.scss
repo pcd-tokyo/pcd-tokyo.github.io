@@ -131,10 +131,47 @@ nav { display: none; }
     ul {
       li {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        p {
-          margin: 0 10px 0 0;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid $color-gray01;
+        &:last-child {
+          border: none;
+        }
+        .infomation {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .time {
+            font-size: $fts-md;
+            color: $key-blue;
+            padding: 0 15px 0 0;
+            margin: 5px 0 0;
+          }
+          .title {
+            font-size: $fts-sm;
+            line-height: 1.4em;
+          }
+          .speaker {
+            font-size: $fts-sm;
+            line-height: 1.4em;
+            color: $color-gray01;
+          }
+        }
+        .label {
+          display: flex;
+          flex-direction: column;
+          p {
+            padding: 4px 20px;
+            background-color: $key-blue;
+            color: $color-base-white;
+            font-size: $fts-sm;
+            display: flex;
+            align-items: center;
+            text-align: center;
+          }
+          a {
+            
+          }
         }
       }
     }

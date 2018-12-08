@@ -37,12 +37,21 @@ body {
 
 p,a {
   color: $color-base-black;
-  font-size: $fts-ms;
+  font-size: $fts-sm;
   line-height: 2em;
+}
+
+a {
+  color: $key-blue;
 }
 
 ul,li {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
 }
