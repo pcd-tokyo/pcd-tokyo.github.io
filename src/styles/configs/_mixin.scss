@@ -40,6 +40,16 @@
   font-size: get_vw($font_size);
   line-height: get_vw($font_size * 1.4);
 }
+
+@mixin fts($size: 14, $lin: 26, $weight: 400) {
+  $rem: $size / 10;
+  $linS: $lin / $size;
+  font-size: #{$size}px;
+  font-size: #{$rem}rem;
+  line-height: $linS;
+  font-weight: #{$weight};
+}
+
 // Clearfix
 @mixin clearfix {
   &:after {
