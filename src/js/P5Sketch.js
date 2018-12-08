@@ -11,7 +11,7 @@ const sketch = (p) => {
     p.setup = () => {
         let canvas = p.createCanvas(canvasWidth, canvasHeight);
         canvas.parent('p5canvas');
-        p.background(200);
+        p.background(240);
 
     }
 
