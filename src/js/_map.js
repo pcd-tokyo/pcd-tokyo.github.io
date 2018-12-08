@@ -23,7 +23,7 @@ module.exports = function(){
         }
       ]
     };
-    var mapElement = document.getElementById('map');
+    var mapElement = document.getElementById('gmap');
     var map = new google.maps.Map(mapElement, mapOptions);
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(35.654161, 139.705584),
