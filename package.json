@@ -40,6 +40,7 @@
     "release": "gulp release"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "extract-svg-path": "^2.1.0",
     "fullcalendar": "^3.9.0",
     "gmaps": "^0.4.24",

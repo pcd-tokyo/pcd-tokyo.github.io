@@ -3,7 +3,40 @@
   from {opacity: 0;}
   to {opacity: 1;}
 }
-nav { display: none; }
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 100;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+  &.is-active {
+    transform: rotateX(0);
+  }
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      width: calc(100% / 4);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(81,97,242,0.8);
+      a {
+        color: $color-base-white;
+      }
+    }
+  }
+}
+
 #gmap {
   position: relative;
   width: 100%;
@@ -79,13 +112,13 @@ nav { display: none; }
     font-size: 45px;
     line-height: 1.5;
     &.is-red {
-      background-color: $key-red;
+      background-color: $key-blue;
     }
   }
   &__lv4 {
     font-size: 40px;
     font-weight: bold;
-    color: $key-red;
+    color: $key-blue;
   }
 }
 
@@ -235,7 +268,7 @@ nav { display: none; }
           align-items: flex-start;
           margin: 20px 0 0;
           img {
-            width: 300px;
+            width: 200px;
           }
           > div {
             padding: 20px;
@@ -263,38 +296,60 @@ nav { display: none; }
     }
   }
   &__openarea {
-    color: $key-red;
+    color: $key-blue;
     ul {
       li {
-        &:hover {
-          .label {
-            border-left: 1px solid $color-base-white;
-            border-right: 1px solid $color-base-white;
-            border-bottom: 1px solid $color-base-white;
-            transform: scaleY(.7) skew(-25deg) translate(-35px,-23px);
-          }
-          .content {
-            transform: scaleY(1);
-            height: auto;
-            .inner {
-              animation: fadeIn 400ms ease 400ms 1 normal;
-              animation-fill-mode: forwards;
-            }
-          }
-        }
+        //&.is-open {
+        //  .label {
+        //    border-left: 1px solid $color-base-white;
+        //    border-right: 1px solid $color-base-white;
+        //    border-bottom: 1px solid $color-base-white;
+        //    transform: scaleY(.7) skew(-25deg) translate(-35px,-23px);
+        //  }
+        //  .content {
+        //    transform: scaleY(1);
+        //    height: auto;
+        //    .inner {
+        //      animation: fadeIn 400ms ease 400ms 1 normal;
+        //      animation-fill-mode: forwards;
+        //    }
+        //  }
+        //}
+        //&:hover {
+        //  .label {
+        //    border-left: 1px solid $color-base-white;
+        //    border-right: 1px solid $color-base-white;
+        //    border-bottom: 1px solid $color-base-white;
+        //    transform: scaleY(.7) skew(-25deg) translate(-35px,-23px);
+        //  }
+        //  .content {
+        //    transform: scaleY(1);
+        //    height: auto;
+        //    .inner {
+        //      animation: fadeIn 400ms ease 400ms 1 normal;
+        //      animation-fill-mode: forwards;
+        //    }
+        //  }
+        //}
         .label {
           position: relative;
           z-index: 10;
           width: 100%;
           height: 110px;
           padding: 15px 20px;
-          background-color: $key-red;
+          background-color: $key-blue;
           display: flex;
           transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
           transform: scaleY(1) skew(0);
+          @include max-screen($breakpoint-sm) {
+            padding: 15px 130px 15px 15px;
+          }
           p {
             color: $color-base-white;
             font-size: 20px;
+            @include max-screen($breakpoint-sm) {
+              font-size: $fts-ss;
+            }
           }
           &:after {
             position: absolute;
@@ -326,13 +381,13 @@ nav { display: none; }
         }
         &:nth-child(even){
           .label,.content {
-            background-color: #f44a5a;
+            background-color: #4b17f2;
           }
         }
         .content {
           position: relative;
           z-index: 1;
-          background-color: $key-red;
+          background-color: $key-blue;
           transition: all 400ms;
           transform-origin: top;
           transform: scaleY(0);
