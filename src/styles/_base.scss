@@ -5,10 +5,11 @@
 // Styleguide base
 
 //Base
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 body {
-  font-family: 'Open Sans', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: 'Nunito','Noto Sans JP', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 html {
@@ -21,7 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: $color-base-white;
-  color: $key-blue;
+  color: $color-base-black;
   font-size: 16px;
   @include min-screen($breakpoint-lg){
 
@@ -35,7 +36,9 @@ body {
 }
 
 p,a {
-  color: $key-blue;
+  color: $color-base-black;
+  font-size: $fts-ms;
+  line-height: 2em;
 }
 
 ul,li {

@@ -1,8 +1,5 @@
 //Layout
-nav {
-  display: none;
-}
-
+nav { display: none; }
 #map {
   position: relative;
   width: 100%;
@@ -111,7 +108,9 @@ nav {
 
 .about {
   &__title {
-
+    font-size: $fts-lg;
+    color: $key-blue;
+    font-weight: bold;
   }
   h4 {
     margin: 60px 0 20px;
