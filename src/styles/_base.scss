@@ -42,7 +42,11 @@ p,a {
 }
 
 a {
+  text-decoration: none;
   color: $key-blue;
+  &:hover {
+    opacity: .7;
+  }
 }
 
 ul,li {
