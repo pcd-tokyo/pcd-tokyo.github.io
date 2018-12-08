@@ -196,6 +196,9 @@ nav { display: none; }
         align-items: center;
         padding: 20px;
         border-bottom: 1px solid $color-gray01;
+        &:last-child {
+          border: none;
+        }
         .infomation {
           h4 {
             font-size: $fts-lm;
@@ -237,6 +240,9 @@ nav { display: none; }
             flex-direction: column;
             img {
               width: 100%;
+            }
+            > div {
+              padding: 10px 0 0;
             }
           }
         }
