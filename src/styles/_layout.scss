@@ -55,6 +55,7 @@ nav { display: none; }
   }
   &__lv3 {
     width: 100%;
+    margin: 50px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,6 +149,7 @@ nav { display: none; }
             margin: 5px 0 0;
           }
           .title {
+            font-weight: bold;
             font-size: $fts-sm;
             line-height: 1.4em;
           }
@@ -185,19 +187,60 @@ nav { display: none; }
     }
   }
   &__semminar {
-    ul {
+    .keynote {
       li {
+        background-color: $color-base-white;
         display: flex;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        p {
-          margin: 0 10px 0 0;
+        padding: 20px;
+        border-bottom: 1px solid $color-gray01;
+        .infomation {
+          h4 {
+            font-size: $fts-lm;
+            font-weight: bold;
+            line-height: 1.4em;
+            span {
+              padding: 0 10px 0 0;
+              color: $key-blue;
+              font-size: $fts-md;
+              font-weight: normal;
+            }
+          }
+          p {
+            margin: 10px 0 0;
+            line-height: 1.6;
+          }
+        }
+        .speaker {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin: 20px 0 0;
+          img {
+            width: 300px;
+          }
+          > div {
+            padding: 20px;
+            h5 {
+              font-size: $fts-md;
+              font-weight: bold;
+              line-height: 1.6em;
+            }
+            p {
+              margin: 0;
+              line-height: 1.6;
+            }
+          }
+          @include max-screen($breakpoint-sm) {
+            flex-direction: column;
+            img {
+              width: 100%;
+            }
+          }
         }
       }
-    }
-    .keynote {
-
-
     }
   }
   &__openarea {
