@@ -25,9 +25,9 @@ nav {
     overflow: hidden;
   }
   #p5canvas {
-      position: fixed;
-      width: 100%;
-      z-index: -1;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
   }
   #about {
 
@@ -113,8 +113,17 @@ nav {
   &__title {
 
   }
+  h4 {
+    margin: 60px 0 20px;
+  }
   p {
-
+    line-height: 2em;
+  }
+  tbody {
+    tr {
+      display: block;
+      margin: 10px 0;
+    }
   }
 }
 
