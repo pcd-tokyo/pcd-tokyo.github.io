@@ -86,7 +86,7 @@
   padding: 0 2%;
 }
 .entrybutton {
-  margin: 10px auto;
+  margin: 10px auto 80px;
   padding: 10px;
   text-align: center;
   a {
@@ -102,6 +102,7 @@
     font-weight: bold;
     color: $key-blue;
     text-align: center;
+    margin: 160px 0 80px;
   }
   &__lv3 {
     width: 100%;
@@ -322,38 +323,40 @@
     color: $key-blue;
     ul {
       li {
-        //&.is-open {
-        //  .label {
-        //    border-left: 1px solid $color-base-white;
-        //    border-right: 1px solid $color-base-white;
-        //    border-bottom: 1px solid $color-base-white;
-        //    transform: scaleY(.7) skew(-25deg) translate(-35px,-23px);
-        //  }
-        //  .content {
-        //    transform: scaleY(1);
-        //    height: auto;
-        //    .inner {
-        //      animation: fadeIn 400ms ease 400ms 1 normal;
-        //      animation-fill-mode: forwards;
-        //    }
-        //  }
-        //}
-        //&:hover {
-        //  .label {
-        //    border-left: 1px solid $color-base-white;
-        //    border-right: 1px solid $color-base-white;
-        //    border-bottom: 1px solid $color-base-white;
-        //    transform: scaleY(.7) skew(-25deg) translate(-35px,-23px);
-        //  }
-        //  .content {
-        //    transform: scaleY(1);
-        //    height: auto;
-        //    .inner {
-        //      animation: fadeIn 400ms ease 400ms 1 normal;
-        //      animation-fill-mode: forwards;
-        //    }
-        //  }
-        //}
+        // ---- comment out from here ----
+        &.is-open {
+         .label {
+           border-left: 1px solid $color-base-white;
+           border-right: 1px solid $color-base-white;
+           border-bottom: 1px solid $color-base-white;
+           transform: scaleY(.7) skew(-25deg) translate(-35px,-23px);
+         }
+         .content {
+           transform: scaleY(1);
+           height: auto;
+           .inner {
+             animation: fadeIn 400ms ease 400ms 1 normal;
+             animation-fill-mode: forwards;
+           }
+         }
+        }
+        &:hover {
+         .label {
+           border-left: 1px solid $color-base-white;
+           border-right: 1px solid $color-base-white;
+           border-bottom: 1px solid $color-base-white;
+           transform: scaleY(.7) skew(-25deg) translate(-35px,-23px);
+         }
+         .content {
+           transform: scaleY(1);
+           height: auto;
+           .inner {
+             animation: fadeIn 400ms ease 400ms 1 normal;
+             animation-fill-mode: forwards;
+           }
+         }
+        }
+        // ---- comment out end ----
         .label {
           position: relative;
           z-index: 10;
@@ -361,7 +364,7 @@
           height: 110px;
           padding: 15px 20px;
           background-color: $key-blue;
-          display: flex;
+          //display: flex;
           transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
           transform: scaleY(1) skew(0);
           @include max-screen($breakpoint-sm) {
@@ -369,7 +372,24 @@
           }
           p {
             color: $color-base-white;
-            font-size: 20px;
+          }
+          .label__title {
+            font-size: 18px;
+            line-height: 1em;
+            padding: 1px;
+            margin: 1px;
+            @include max-screen($breakpoint-sm) {
+              font-size: $fts-ss;
+            }
+          }
+          .label__lecturer {
+            &:before {
+              content: "by ";
+              font-size: 18px;
+            }
+            font-size: 22px;
+            padding: 1px;
+            margin: 1px;
             @include max-screen($breakpoint-sm) {
               font-size: $fts-ss;
             }

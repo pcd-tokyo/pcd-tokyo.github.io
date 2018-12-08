@@ -27,18 +27,7 @@
 
 @include min-screen($breakpoint-sm) {
   .footer {
-    padding: 0 0 50px;
-    ul {
-      width: 930px;
-      margin: 0 auto;
-      padding: 0 20px;
-      li {
-        height: 73px;
-        a {
-          display: block;
-          height: 100%;
-        }
-      }
-    }
+    padding: 10 0 10px;
+    text-align: center;
   }
 }
