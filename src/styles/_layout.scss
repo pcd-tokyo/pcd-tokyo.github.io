@@ -31,7 +31,18 @@
       justify-content: center;
       background-color: rgba(81,97,242,0.8);
       a {
+        font-size: $fts-sm;
         color: $color-base-white;
+      }
+    }
+  }
+  @include max-screen($breakpoint-sm) {
+    height: 50px;
+    ul {
+      li {
+        a {
+          font-size: $fts-es;
+        }
       }
     }
   }
@@ -42,13 +53,6 @@
   width: 100%;
   height: 400px;
   margin: 100px 0 50px;
-}
-@include min-screen($breakpoint-sm) {
-  #map {
-    position: relative;
-    width: 100%;
-    height: 500px;
-  }
 }
 
 .main {
@@ -119,6 +123,7 @@
     font-size: 40px;
     font-weight: bold;
     color: $key-blue;
+    margin: 20px 0 0;
   }
 }
 
@@ -135,19 +140,37 @@
     transform: translateY(-50%);
     h1 {
       color: $key-blue;
-      //font-size: 18.75vw;
       font-size: 60px;
       line-height: 1.4;
     }
     h2 {
       color: $key-blue;
-      //font-size: 18.75vw;
       font-size: 60px;
       line-height: 1.4;
       span {
-        //font-size: 21.875vw;
         font-size: 70px;
         line-height: 1.4;
+      }
+    }
+    @include max-screen($breakpoint-sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      h1 {
+        font-size: 40px;
+        line-height: 1.1;
+      }
+      h2 {
+        margin: 20px 0 0;
+        font-size: 40px;
+        line-height: 1.1;
+        br {
+          display: none;
+        }
+        span {
+          font-size: 50px;
+          line-height: 1.1;
+          display: block;
+        }
       }
     }
   }
@@ -428,6 +451,51 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+#ticket {
+  margin: 50px 0 0;
+  p {
+    text-align: center;
+  }
+  .ticket {
+    position: relative;
+    margin: 30px auto;
+    width: 250px;
+    height: 110px;
+    background: #56ab48;
+    color: $color-base-white;
+    font-size: $fts-md;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    border: 3px solid $color-base-white;
+    overflow: hidden;
+    opacity: 0.5;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -8px;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      background-color: $color-base-white;
+      border-radius: 50%;
+    }
+    .inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      border: 3px dashed $color-base-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        margin: 0 6px 0 0;
       }
     }
   }
