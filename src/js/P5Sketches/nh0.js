@@ -1,5 +1,3 @@
-import p5 from 'p5'
-
 module.exports = (p) => {
     let points = [];
     let funcs = [
@@ -53,7 +51,7 @@ module.exports = (p) => {
             init();
         }
         p.translate(p.width / 2, 0);
-        let gy = p.map(p.frameCount % 1000, 0, 1000, -200, p.height + 200);
+        let gy = p.map(p.frameCount % 1000, 0, 1000, -100, p.height + 200);
         p.translate(0, gy);
         for(let i = 0; i < points.length; i++) {
             let pt = points[i];
@@ -81,7 +79,3 @@ module.exports = (p) => {
     }
 
 }
-
-// export default function initP5() {
-//     return new p5(sketch);
-// }
