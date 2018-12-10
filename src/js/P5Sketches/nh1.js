@@ -14,12 +14,24 @@ module.exports = (p) => {
             let qn = Math.pow(2, Math.floor(p.map(i, 0, n, 3, 8)));
             let y = p.map(qn, 0, Math.pow(2, 7), 0, p.height);
             let x = Math.floor(p.random(p.width) / qn) * qn;
-            points.push({x: x, y: y, target0: Math.floor(p.random(n)), target1: Math.floor(p.random(n))});
+            let vx = p.random(1) > 0.5 ? 2 : 0;
+            let vy = vx > 0 ? 0 : 2;
+
+            points.push({
+                x: x,
+                y: y,
+                vx: vx,
+                vy: vy,
+                target0: Math.floor(p.random(n)),
+                target1: Math.floor(p.random(n))
+            });
         }
     }
 
     p.draw = () => {
-        p.background(240);
+        let pagePos = document.documentElement.scrollTop || document.body.scrollTop;
+        p.background(p.constrain(pagePos, 0, 240));
+        let alpha = p.constrain(p.map(pagePos, 0.0, 300.0, 1.0, 0.3), 0.3, 1.0);
         p.noFill();
 
         if(p.frameCount % 120 == 0) {
@@ -28,8 +40,10 @@ module.exports = (p) => {
                 pt.target1 = Math.floor(p.random(points.length));
             }
         }
-
-        let alpha = 1;
+        for(let pt of points) {
+            pt.x = (pt.x + pt.vx + p.width) % p.width;
+            pt.y = (pt.y + pt.vy + p.height) % p.height;
+        }
 
         let t = (p.frameCount / 30.0) * 0.25;
         t = t - Math.floor(t);
