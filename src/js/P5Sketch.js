@@ -1,28 +1,9 @@
 import p5 from 'p5'
+import p5nh0 from './P5Sketches/nh0.js'
+import p5nh1 from './P5Sketches/nh1.js'
 
-const sketch = (p) => {
-
-    p.preload = () => {
-
-    }
-
-    p.setup = () => {
-        let canvas = p.createCanvas(window.innerWidth, window.innerHeight).parent('p5canvas');
-        p.background(240);
-
-
-    }
-
-    p.draw = () => {
-
-
-    }
-
-    p.windowResized = () => {
-        p.resizeCanvas(window.innerWidth, window.innerHeight);
-    }
-
-}
+let sketches = [p5nh0, p5nh1];
+let sketch = sketches[Math.floor(sketches.length * Math.random())];
 
 export default function initP5() {
     return new p5(sketch);
