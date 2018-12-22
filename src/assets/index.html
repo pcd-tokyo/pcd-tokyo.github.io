@@ -33,30 +33,37 @@
   <nav class="nav">
     <ul>
       <li><a href="#about">PCDについて</a></li>
-      <li><a href="#event">イベント情報</a></li>
-      <li><a href="#ticket">チケット購入</a></li>
-      <li><a href="#access">アクセス</a></li>
+      <li><a href="#event">イベント</a></li>
+      <li><a href="#ticket">チケット</a></li>
     </ul>
   </nav>
 </header><!-- /header -->
 <main class="main">
   <section id="hero" class="hero">
     <div id="p5canvas"></div>
+    <div id="borderCanvas">
+      <div class="border"></div>
+    </div>
     <div class="hero__title">
       <img style="width: 100%" src="./images/banner.svg" />
     </div>
   </section>
   <section id="about" class="about">
     <div class="container">
-      <h3 data-aos="fade-up" class="about__title">Processing Community</h3>
       <h4 data-aos="fade-up">Processing（プロセッシング） とは？</h4>
       <p data-aos="fade-up">マサチューセッツ工科大学メディアラボ発祥の教育用プログラミング言語で、世界中で親しまれています。プログラミングの入門だけでなく、メディア・アートや科学研究など幅広い分野で用いられています。</p>
-      <p data-aos="fade-up"><a href="https://processing.org/">Processing</a></p>
+      <p data-aos="fade-up">
+        &gt; <a href="https://processing.org/">Processing</a><br>
+        &gt; <a href="https://processingfoundation.org/">Processing Foundation</a>
+      </p>
       <h4 data-aos="fade-up">Processing Community Day（プロセッシング・コミュニティ・デー） とは？</h4>
       <p data-aos="fade-up">Processing のユーザーの交流イベントで、アートとプログラミングのコミュニティの多様性を祝って世界各地で2019年1月15日から2月15日の間に開催されます。東京では2019年2月2日に Yahoo! LODGE にて開催されます。Processing のパイオニアや若手アーティストらによる講演やワークショップを通じて、クリエイティブなハックやアートに直に触れることができます。</p>
-      <a data-aos="fade-up" href="https://day.processing.org/">Processing Community Day Wolrdwide</a>
-      <a data-aos="fade-up" href="https://twitter.com/hashtag/PCD2019">#pcd2019</a>
-      <a data-aos="fade-up" href="https://twitter.com/hashtag/PCDTOKYO">#pcdtokyo</a>
+      <p data-aos="fade-up">
+        &gt; <a href="https://www.facebook.com/events/420228961850467">facebook event page</a><br>
+        &gt; <a href="https://day.processing.org/">Processing Community Day Wolrdwide</a><br>
+        &gt; <a href="https://twitter.com/hashtag/PCD2019">#pcd2019</a><br>
+        &gt; <a href="https://twitter.com/hashtag/PCDTOKYO">#pcdtokyo</a>
+      </p>
       <h4 data-aos="fade-up">具体的な企画は？</h4>
       <p data-aos="fade-up">Processing を作品制作に活用しているアーティストや研究者の基調講演やライトニングトーク（一人5分程度のプレゼンテーション）を企画しています。また、初学者向けのワークショップや、インタラクティブ、グラフィック、デザイン、機械学習といった様々なテーマに特化したワークショップも行います。少人数に分かれての集中型のものを複数企画しているので、講師と対話しながら学ぶことができますので、初学者や独学者たちも奮ってご参加ください！</p>
       <table data-aos="fade-up">
@@ -321,9 +328,10 @@
       <div class="timetable__workshop">
         <ul>
           <li data-aos="fade-up">
-            <div class="label">
-              <p class="label__title">WS1</p>
-              <p class="label__lecturer">reona396</p>
+            <div class="ws">
+              <p class="ws__time">13:00~ / 15:00~</p>
+              <p class="ws__title">ワークショップ by reona396</p>
+              <p class="ws__description">詳細準備中</p>
             </div>
             <div class="content">
               <div class="inner">
@@ -338,9 +346,10 @@
             </div>
           </li>
           <li data-aos="fade-up">
-            <div class="label">
-              <p class="label__title">WS2</p>
-              <p class="label__lecturer">FMS_CAT</p>
+            <div class="ws">
+              <p class="ws__time">13:00~</p>
+              <p class="ws__title">ワークショップ by Yutaka "FMS_Cat" Obuchi</p>
+              <p class="ws__description">詳細準備中</p>
             </div>
             <div class="content">
               <div class="inner">
@@ -348,7 +357,7 @@
                 <div class="lecturer">
                   <img src="./images/ws_cat.png" alt="speaker">
                   <div>
-                    <h4>FMS_CAT</h4>
+                    <h4>Yutaka "FMS_Cat" Obuchi</h4>
                     <p>クリエイティブコーディング愛好家。都内の会社でエンジニアとして働いている。
                       学生時代にProcessingでプログラミングの基礎を学び、現在はWebの世界を中心に、CGに関わるあらゆる活動を行っている。
                       特に、シェーダを用いた表現を得意とし、単なるシェーディングにとどまらず、レイマーチング・パーティクルシステム・音楽生成といった表現までもGLSLを用いて行う。</p>
@@ -358,9 +367,10 @@
             </div>
           </li>
           <li data-aos="fade-up">
-            <div class="label">
-              <p class="label__title">WS3</p>
-              <p class="label__lecturer">田所淳</p>
+            <div class="ws">
+              <p class="ws__time">13:00~ / 15:00~</p>
+              <p class="ws__title">ワークショップ by 田所淳</p>
+              <p class="ws__description">詳細準備中</p>
             </div>
             <div class="content">
               <div class="inner">
@@ -376,9 +386,10 @@
             </div>
           </li>
           <li data-aos="fade-up">
-            <div class="label">
-              <p class="label__title">WS4</p>
-              <p class="label__lecturer">ritoco</p>
+            <div class="ws">
+              <p class="ws__time">13:00~</p>
+              <p class="ws__title">ワークショップ by ritoco</p>
+              <p class="ws__description">詳細準備中</p>
             </div>
             <div class="content">
               <div class="inner">
@@ -394,9 +405,10 @@
             </div>
           </li>
           <li data-aos="fade-up">
-            <div class="label">
-              <p class="label__title">WS5</p>
-              <p class="label__lecturer">Scott Allen</p>
+            <div class="ws">
+              <p class="ws__time">13:00~ / 15:00~</p>
+              <p class="ws__title">ワークショップ by Scott Allen</p>
+              <p class="ws__description">詳細準備中</p>
             </div>
             <div class="content">
               <div class="inner">
@@ -412,13 +424,13 @@
             </div>
           </li>
           <li data-aos="fade-up">
-            <div class="label">
-              <p class="label__title">WS7</p>
-              <p class="label__lecturer">山田啓太（なめらかサンショウウオ）</p>
+            <div class="ws">
+              <p class="ws__time">15:00~</p>
+              <p class="ws__title">ワークショップ by 山田啓太（なめらかサンショウウオ）</p>
+              <p class="ws__description">詳細準備中</p>
             </div>
             <div class="content">
               <div class="inner">
-                <!-- <p class="lead">パーティクルを使った魅力的なジェネラティブアートを制作する手法をお話します。</p> -->
                 <div class="lecturer">
                   <img src="./images/ws_nameraka.png" alt="speaker">
                   <div>
@@ -436,9 +448,11 @@
   <section id="ticket">
     <div class="container">
       <h2 data-aos="fade-up" class="hdg__lv2">Ticket</h2>
-      <p data-aos="fade-up">1月より販売開始</p>
-      <div class="ticket">
-        <div class="inner"><i class="fas fa-receipt"></i>Sell for Peatix</div>
+      <div data-aos="fade-up" class="ticket__info">
+        <p>1月より販売開始</p>
+        <div class="pticket">
+          <div class="inner"><i class="fas fa-receipt"></i>Get in Peatix</div>
+        </div>
       </div>
     </div>
   </section>

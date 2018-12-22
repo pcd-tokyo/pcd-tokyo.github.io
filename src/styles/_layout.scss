@@ -14,6 +14,7 @@
   transform-style: preserve-3d;
   transform-origin: top;
   transform: rotateX(-90deg);
+  background-color: rgba(81,97,242,0.8);
   &.is-active {
     transform: rotateX(0);
   }
@@ -24,12 +25,11 @@
     justify-content: space-between;
     align-items: center;
     li {
-      width: calc(100% / 4);
+      width: calc(100% / 3);
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(81,97,242,0.8);
       a {
         font-size: $fts-sm;
         color: $color-base-white;
@@ -67,21 +67,12 @@
     width: 100%;
     z-index: -1;
   }
-  #about {
-
-  }
-  #event {
-
-  }
-  #access {
-
-  }
 }
 
 .container {
   display: block;
   width: 100%;
-  margin: 0 auto;
+  margin: 200px auto 0;
   max-width: 960px;
   padding: 0 2%;
 }
@@ -100,13 +91,14 @@
     font-size: 50px;
     //font-style: italic;
     font-weight: bold;
-    color: $key-blue;
+    color: $sub-blue;
     text-align: center;
     margin: 240px 0 160px;
   }
   &__lv3 {
     width: 100%;
     margin: 160px 0 0;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,10 +106,10 @@
     font-weight: bold;
     background-color: $key-blue;
     color: $color-base-white;
-    font-size: 45px;
+    font-size: 36px;
     line-height: 1.5;
-    &.is-red {
-      background-color: $key-blue;
+    @include max-screen($breakpoint-sm) {
+      font-size: 32px;
     }
   }
   &__lv4 {
@@ -129,6 +121,22 @@
 }
 
 .hero {
+  #borderCanvas {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    .border {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      border: solid 40px $key-blue;
+      @include max-screen($breakpoint-sm) {
+        border: solid 24px $key-blue;
+      }
+    }
+  }
   &__title {
     position: absolute;
     display: flex;
@@ -139,45 +147,27 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    h1 {
-      color: $key-blue;
-      font-size: 60px;
-      line-height: 1.4;
-    }
-    h2 {
-      color: $key-blue;
-      font-size: 60px;
-      line-height: 1.4;
-      span {
-        font-size: 70px;
-        line-height: 1.4;
+    > img {
+      width: 100%;
+      max-width: 590px;
+      margin: 0 auto;
+      @include max-screen($breakpoint-sm) {
+        max-width: 275px;
       }
     }
     @include max-screen($breakpoint-sm) {
       flex-direction: column;
       align-items: flex-start;
-      h1 {
-        font-size: 40px;
-        line-height: 1.1;
-      }
-      h2 {
-        margin: 20px 0 0;
-        font-size: 40px;
-        line-height: 1.1;
-        br {
-          display: none;
-        }
-        span {
-          font-size: 50px;
-          line-height: 1.1;
-          display: block;
-        }
-      }
     }
   }
 }
 
 .about {
+  //padding: 10px 30px;
+  .container {
+    padding: 10px 30px 60px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
   &__title {
     font-size: $fts-lg;
     color: $key-blue;
@@ -185,6 +175,7 @@
   }
   h4 {
     margin: 60px 0 20px;
+    line-height: 1.7em;
   }
   p {
     line-height: 2em;
@@ -193,6 +184,12 @@
     tr {
       display: block;
       margin: 10px 40px;
+      @include max-screen($breakpoint-sm) {
+        margin: 10px 20px;
+      }
+      th {
+        width: 60px;
+      }
     }
   }
 }
@@ -216,15 +213,13 @@
           justify-content: flex-start;
           align-items: flex-start;
           .time {
-            font-size: $fts-md;
+            font-size: $fts-sm;
             color: $key-blue;
             padding: 0 15px 0 10px;
-            margin: 5px 0 0;
           }
           .title {
             font-weight: bold;
             font-size: $fts-sm;
-            line-height: 1.4em;
           }
           .speaker {
             font-size: $fts-sm;
@@ -278,6 +273,7 @@
             font-size: $fts-lm;
             font-weight: bold;
             line-height: 1.4em;
+            color: $sub-blue;
             span {
               padding: 0 10px 0 0;
               color: $key-blue;
@@ -301,6 +297,7 @@
           > div {
             padding: 20px;
             h5 {
+              color: $sub-blue;
               font-size: $fts-md;
               font-weight: bold;
               line-height: 1.6em;
@@ -313,11 +310,12 @@
           }
           @include max-screen($breakpoint-sm) {
             flex-direction: column;
+            margin: 30px 30px 0;
             img {
               width: 100%;
             }
             > div {
-              padding: 10px 0 0;
+              padding: 10px 0 30px;
             }
           }
         }
@@ -326,122 +324,37 @@
   }
   &__workshop {
     color: $key-blue;
+    background: rgba(255, 255, 255, 0.7);
     ul {
       li {
-        // ---- comment out from here ----
-        &.is-open {
-         .label {
-           border-left: 1px solid $color-base-white;
-           border-right: 1px solid $color-base-white;
-           border-bottom: 1px solid $color-base-white;
-           //transform: scaleY(.7) skew(-25deg) translate(-35px,-23px);
-         }
-         .content {
-           //transform: scaleY(1);
-           height: auto;
-           .inner {
-             //animation: fadeIn 400ms ease 400ms 1 normal;
-             //animation-fill-mode: forwards;
-           }
-         }
-        }
-        &:hover {
-         .label {
-           // border-left: 1px solid $color-base-white;
-           // border-right: 1px solid $color-base-white;
-           // border-bottom: 1px solid $color-base-white;
-           //transform: scaleY(.7) skew(-25deg) translate(-35px,-23px);
-         }
-         .content {
-           //transform: scaleY(1);
-           height: auto;
-           .inner {
-             // animation: fadeIn 400ms ease 400ms 1 normal;
-             // animation-fill-mode: forwards;
-           }
-         }
-        }
-        // ---- comment out end ----
-        .label {
+        .ws {
           position: relative;
-          //z-index: 10;
           width: 100%;
-          height: 110px;
-          padding: 15px 20px;
-          background-color: $key-blue;
-          //display: flex;
-          //transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
-          //transform: scaleY(1) skew(0);
-          @include max-screen($breakpoint-sm) {
-            padding: 15px 130px 15px 15px;
-          }
-          p {
-            color: $color-base-white;
-          }
-          .label__title {
-            font-size: 18px;
+          padding: 75px 20px 15px;
+          &__time {
+            color: $key-blue;
             line-height: 1em;
-            padding: 1px;
-            margin: 1px;
-            @include max-screen($breakpoint-sm) {
-              font-size: $fts-ss;
-            }
+            margin: 0;
+            padding: 0;
           }
-          .label__lecturer {
-            &:before {
-              content: "by ";
-              font-size: 18px;
-            }
-            font-size: 22px;
-            padding: 1px;
-            margin: 1px;
-            @include max-screen($breakpoint-sm) {
-              font-size: $fts-ss;
-            }
+          &__title {
+            font-size: $fts-lm;
+            line-height: 1em;
+            font-weight: bold;
+            margin: 10px 0;
+            padding: 0;
           }
-          &:after {
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            padding: 10px 15px;
-            border: 1px solid $color-base-white;
-            color: $color-base-white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          &.forBeginner {
-            &:after {
-              content: 'Beginner';
-            }
-          }
-          &.forIntermediate {
-            &:after {
-              content: 'Intermediate';
-            }
-          }
-          &.forProfessional {
-            &:after {
-              content: 'Professional';
-            }
+          &__description {
+            margin: 0;
+            padding: 0;
           }
         }
-        &:nth-child(even){
-          .label,.content {
-            background-color: #4b17f2;
-          }
-        }
+
         .content {
           //position: relative;
           z-index: 1;
-          background-color: $key-blue;
-          //transition: all 400ms;
-          //transform-origin: top;
-          //transform: scaleY(0);
-          //height: 0;
-          padding: 90px 20px 20px;
-          margin: -110px 0 0;
+          background-color: $sub-blue;
+          margin: 0 0 0 45px;
           p {
             margin: 0;
             &.lead {
@@ -451,32 +364,35 @@
             }
           }
           .inner {
-            //opacity: 0;
+            padding: 10px;
           }
           .lecturer {
-            margin: 20px 0 0;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             background: $color-base-white;
+            @include max-screen($breakpoint-sm) {
+              flex-direction: column;
+            }
             img {
-              width: 150px;
+              width: 178px;
+              @include max-screen($breakpoint-sm) {
+                width: 100%;
+              }
             }
             > div {
               padding: 0 20px 0;
               h4 {
-                font-size: $fts-sm;
+                font-size: $fts-lm;
                 color: $color-base-black;
                 margin: 16px 0 8px;
                 line-height: 1.6;
-                @include max-screen($breakpoint-sm) {
-                  margin: 8px 0 6px;
-                }
               }
               p {
                 font-size: $fts-ss;
                 color: $color-base-black;
                 line-height: 1.6;
+                padding: 0 0 20px;
               }
             }
           }
@@ -488,45 +404,51 @@
 
 #ticket {
   margin: 50px 0 0;
-  p {
-    text-align: center;
-  }
-  .ticket {
-    position: relative;
-    margin: 30px auto;
-    width: 250px;
-    height: 110px;
-    background: #56ab48;
-    color: $color-base-white;
-    font-size: $fts-md;
-    font-weight: bold;
-    border-radius: 10px;
-    padding: 10px;
-    border: 3px solid $color-base-white;
-    overflow: hidden;
-    opacity: 0.5;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: -8px;
-      transform: translateY(-50%);
-      width: 15px;
-      height: 15px;
-      background-color: $color-base-white;
-      border-radius: 50%;
-    }
-    .inner {
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      border: 3px dashed $color-base-white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      i {
-        margin: 0 6px 0 0;
+  .ticket__info {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 100px 0;
+      p {
+        font-size: 1.3em;
+        text-align: center;
       }
-    }
+      .pticket {
+        position: relative;
+        margin: 30px auto;
+        width: 250px;
+        height: 110px;
+        background: #56ab48;
+        color: $color-base-white;
+        font-size: $fts-md;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 10px;
+        border: 3px solid $color-base-white;
+        overflow: hidden;
+        opacity: 0.5;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: -8px;
+          transform: translateY(-50%);
+          width: 15px;
+          height: 15px;
+          background-color: $color-base-white;
+          border-radius: 50%;
+        }
+        .inner {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          border: 3px dashed $color-base-white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          i {
+            margin: 0 6px 0 0;
+          }
+        }
+      }
   }
+
 }
