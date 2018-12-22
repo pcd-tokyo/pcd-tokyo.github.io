@@ -325,6 +325,7 @@
   &__workshop {
     color: $key-blue;
     background: rgba(255, 255, 255, 0.7);
+    padding: 0 0 20px;
     ul {
       li {
         .ws {
@@ -354,10 +355,7 @@
           //position: relative;
           z-index: 1;
           background-color: $sub-blue;
-          margin: 0 0 0 45px;
-          @include max-screen($breakpoint-sm) {
-            margin: 0 20px;
-          }
+          margin: 0 20px;
           p {
             margin: 0;
             &.lead {
