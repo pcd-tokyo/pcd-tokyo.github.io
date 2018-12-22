@@ -2,7 +2,7 @@ node_modules/
 /**/node_modules
 .*
 *.map
-bundle.*
+/src/*/bundle.*
 !.gitignore
 !.babelrc
 npm-debug.log
