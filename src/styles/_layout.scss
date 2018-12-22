@@ -355,6 +355,9 @@
           z-index: 1;
           background-color: $sub-blue;
           margin: 0 0 0 45px;
+          @include max-screen($breakpoint-sm) {
+            margin: 0 20px;
+          }
           p {
             margin: 0;
             &.lead {
