@@ -102,11 +102,11 @@
     font-weight: bold;
     color: $key-blue;
     text-align: center;
-    margin: 160px 0 80px;
+    margin: 240px 0 160px;
   }
   &__lv3 {
     width: 100%;
-    margin: 50px 0 0;
+    margin: 160px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,6 +199,8 @@
 
 .timetable {
   &__lt {
+    padding: 5px;
+    background-color: #fff;
     ul {
       li {
         display: flex;
@@ -215,7 +217,7 @@
           .time {
             font-size: $fts-md;
             color: $key-blue;
-            padding: 0 15px 0 0;
+            padding: 0 15px 0 10px;
             margin: 5px 0 0;
           }
           .title {
@@ -256,8 +258,8 @@
       }
     }
   }
-  &__semminar {
-    .keynote {
+  &__keynote {
+    ul {
       li {
         background-color: $color-base-white;
         display: flex;
