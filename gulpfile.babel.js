@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import deploy from 'gulp-gh-pages-will'
 import GulpLoadPlugins from 'gulp-load-plugins';
 import VinylBuffer from 'vinyl-buffer';
 import PrettyHRTime from 'pretty-hrtime';
@@ -131,3 +132,12 @@ gulp.task( 'release', ( done ) => {
     done
   );
 } );
+
+// Build and push to github pages
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy({
+      remoteUrl: "https://github.com/pcd-tokyo/pcd-tokyo.github.io.git",
+      branch: "gh-pages"
+    }))
+});
