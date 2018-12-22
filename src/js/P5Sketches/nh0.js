@@ -36,7 +36,7 @@ module.exports = (p) => {
     }
 
     p.setup = () => {
-        let canvas = p.createCanvas(window.innerWidth, window.innerHeight).parent('p5canvas');
+        let canvas = p.createCanvas(screen.width, screen.height).parent('p5canvas');
         p.background(240);
 
         for(let i = 0; i <= 100; i++) {
@@ -75,7 +75,7 @@ module.exports = (p) => {
     }
 
     p.windowResized = () => {
-        p.resizeCanvas(window.innerWidth, window.innerHeight);
+        p.resizeCanvas(screen.width, screen.height);
     }
 
 }

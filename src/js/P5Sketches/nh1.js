@@ -5,7 +5,7 @@ module.exports = (p) => {
 
     let points = [];
     p.setup = () => {
-        let canvas = p.createCanvas(window.innerWidth, window.innerHeight).parent('p5canvas');
+        let canvas = p.createCanvas(screen.width, screen.height).parent('p5canvas');
         p.background(240);
         p.frameRate(30);
 
@@ -82,7 +82,7 @@ module.exports = (p) => {
     }
 
     p.windowResized = () => {
-        p.resizeCanvas(window.innerWidth, window.innerHeight);
+        p.resizeCanvas(screen.width, screen.height);
     }
 
 }

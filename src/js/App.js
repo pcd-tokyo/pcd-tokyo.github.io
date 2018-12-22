@@ -25,6 +25,10 @@ $(()=>{
     return false;
   });
 
+  $("#hero .border").css({
+      height: window.innerHeight
+  });
+
   //
   window.p5 = P5Sketch();
 

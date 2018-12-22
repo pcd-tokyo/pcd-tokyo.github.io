@@ -15,13 +15,13 @@ module.exports = (p) => {
     var prePagePos = p.random(1000);
 
     p.setup = () => {
-      let canvas = p.createCanvas(window.innerWidth, window.innerHeight).parent('p5canvas');
+      let canvas = p.createCanvas(screen.width, screen.height).parent('p5canvas');
       backgroundCol = p.color(p.random(55)+200, p.random(55)+200, p.random(55)+200);
       col1 = p.color(p.random(255), p.random(255), p.random(255));
       col2 = p.color(p.random(255), p.random(255), p.random(255));
       col3 = p.color(p.random(255), p.random(255), p.random(255));
       p.background(backgroundCol);
-  
+
       for (var i = 0; i < nums; i++) {
         particles_a[i] = new Particle(p.random(0, p.width), p.random(0, p.height));
         particles_b[i] = new Particle(p.random(0, p.width), p.random(0, p.height));
@@ -32,7 +32,7 @@ module.exports = (p) => {
     p.draw = () => {
         let pagePos = document.documentElement.scrollTop || document.body.scrollTop;
         let scrollDelta = pagePos - prePagePos;
-        prePagePos = pagePos;        
+        prePagePos = pagePos;
         checkScroll(scrollDelta);
 
         p.noStroke();
@@ -60,13 +60,13 @@ module.exports = (p) => {
         particles_c[i].move();
         particles_c[i].display(radius);
         particles_c[i].checkEdge();
-    
-    
+
+
         }
     }
 
     p.windowResized = () => {
-        p.resizeCanvas(window.innerWidth, window.innerHeight);
+        p.resizeCanvas(screen.width, screen.height);
     }
 
     function rand2D(x, y) {
@@ -107,7 +107,7 @@ module.exports = (p) => {
       this.pos = p.createVector(x, y);
 	  this.prePos = p.createVector(0, 0);
       this.speed = 0.8;
-  
+
       this.move = function() {
         var angle = direction(this.pos.x / noiseScale, this.pos.y / noiseScale) * 3.14 * noiseScale;
         this.dir.x = p.cos(angle);
