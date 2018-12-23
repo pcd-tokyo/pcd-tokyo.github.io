@@ -376,7 +376,7 @@
               flex-direction: column;
             }
             img {
-              width: 178px;
+              width: 227px;
               @include max-screen($breakpoint-sm) {
                 width: 100%;
               }
@@ -394,6 +394,18 @@
                 color: $color-base-black;
                 line-height: 1.6;
                 padding: 0 0 20px;
+              }
+            }
+            &.tado {
+              > div {
+                h4 {
+                  margin: 6px 0 2px;
+                  font-size: $fts-lm - 6px;
+                  @include max-screen($breakpoint-sm) {
+                    margin: 16px 0 8px;
+                    font-size: $fts-lm;
+                  }
+                }
               }
             }
           }
