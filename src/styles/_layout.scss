@@ -399,7 +399,7 @@
             &.tado {
               > div {
                 h4 {
-                  margin: 6px 0 2px;
+                  margin: 6px 0 0px;
                   font-size: $fts-lm - 6px;
                   @include max-screen($breakpoint-sm) {
                     margin: 16px 0 8px;
