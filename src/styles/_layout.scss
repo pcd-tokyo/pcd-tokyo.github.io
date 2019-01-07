@@ -424,14 +424,48 @@
 }
 
 #ticket {
-  margin: 50px 0 0;
+  margin: 30px 0 0;
   .ticket__info {
       background-color: rgba(255, 255, 255, 0.8);
       padding: 100px 0;
+      width: 100%;
       p {
-        font-size: 1.3em;
-        text-align: center;
+        font-size: 0.9em;
+        text-align: left;
+        margin: 50px auto;
+        width: 512px;
+        @include max-screen($breakpoint-sm) {
+          padding: 10px;
+          width: auto;
+        }
       }
+      table {
+          width: 100%;
+          tbody {
+            display: block;
+            width: 450px;
+            margin: 10px auto;
+            @include max-screen($breakpoint-sm) {
+              width: 275px;
+            }
+            tr {
+              display: block;
+              margin: 14px 20px;
+              text-align: left;
+              @include max-screen($breakpoint-sm) {
+                margin: 14px 20px;
+              }
+              th {
+                  display: inline-block;
+                  width: 300px;
+              }
+              td {
+                  display: inline-block;
+              }
+            }
+          }
+      }
+
       .pticket {
         position: relative;
         margin: 30px auto;
@@ -445,7 +479,7 @@
         padding: 10px;
         border: 3px solid $color-base-white;
         overflow: hidden;
-        opacity: 0.5;
+        opacity: 1;
         &:after {
           content: '';
           position: absolute;
