@@ -332,7 +332,11 @@
         .ws {
           position: relative;
           width: 100%;
-          padding: 75px 20px 15px;
+          padding:192px 20px 15px;
+          .flex-container {
+            display: flex;
+            align-items: flex-start;
+          }
           &__time {
             color: $key-blue;
             line-height: 1em;
@@ -346,7 +350,12 @@
             margin: 10px 0;
             padding: 0;
           }
+          &__thumb {
+            width: 309px;
+            margin: 28px 20px 0 10px;
+          }
           &__description {
+            position: relative;
             margin: 0;
             padding: 10px 2px;
             h4 {
@@ -356,7 +365,7 @@
         }
 
         .content {
-          //position: relative;
+          position: relative;
           z-index: 1;
           background-color: $sub-blue;
           margin: 0 20px;
@@ -397,7 +406,7 @@
                 font-size: $fts-ss;
                 color: $color-base-black;
                 line-height: 1.6;
-                padding: 0 0 20px;
+                padding: 0 0 10px;
               }
             }
             &.tado {
