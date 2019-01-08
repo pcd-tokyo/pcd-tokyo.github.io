@@ -336,6 +336,9 @@
           .flex-container {
             display: flex;
             align-items: flex-start;
+            @include max-screen($breakpoint-sm) {
+              flex-direction: column;
+            }
           }
           &__time {
             color: $key-blue;
@@ -353,6 +356,10 @@
           &__thumb {
             width: 309px;
             margin: 28px 20px 0 10px;
+            @include max-screen($breakpoint-sm) {
+              width: 100%;
+              margin: 10px 0;
+            }
           }
           &__description {
             position: relative;
