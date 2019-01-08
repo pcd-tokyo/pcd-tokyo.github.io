@@ -347,7 +347,10 @@
           }
           &__description {
             margin: 0;
-            padding: 0;
+            padding: 10px 2px;
+            h4 {
+              color: $color-base-black;
+            }
           }
         }
 
@@ -426,84 +429,84 @@
 #ticket {
   margin: 30px 0 0;
   .ticket__info {
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 100px 0;
-      width: 100%;
-      p {
-        font-size: 0.9em;
-        text-align: left;
-        margin: 50px auto;
-        width: 512px;
-        @include max-screen($breakpoint-sm) {
-          padding: 10px;
-          width: auto;
-        }
-      }
-      table {
-          width: 100%;
-          tbody {
-            display: block;
-            width: 450px;
-            margin: 10px auto;
-            @include max-screen($breakpoint-sm) {
-              width: 275px;
-            }
-            tr {
-              display: block;
-              margin: 14px 20px;
-              text-align: left;
-              @include max-screen($breakpoint-sm) {
-                margin: 14px 20px;
-              }
-              th {
-                  display: inline-block;
-                  width: 300px;
-              }
-              td {
-                  display: inline-block;
-              }
-            }
-          }
-      }
-
-      .pticket {
-        position: relative;
-        margin: 30px auto;
-        width: 250px;
-        height: 110px;
-        background: #56ab48;
-        color: $color-base-white;
-        font-size: $fts-md;
-        font-weight: bold;
-        border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 100px 0;
+    width: 100%;
+    p {
+      font-size: 0.9em;
+      text-align: left;
+      margin: 50px auto;
+      width: 512px;
+      @include max-screen($breakpoint-sm) {
         padding: 10px;
-        border: 3px solid $color-base-white;
-        overflow: hidden;
-        opacity: 1;
-        &:after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: -8px;
-          transform: translateY(-50%);
-          width: 15px;
-          height: 15px;
-          background-color: $color-base-white;
-          border-radius: 50%;
+        width: auto;
+      }
+    }
+    table {
+      width: 100%;
+      tbody {
+        display: block;
+        width: 450px;
+        margin: 10px auto;
+        @include max-screen($breakpoint-sm) {
+          width: 275px;
         }
-        .inner {
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
-          border: 3px dashed $color-base-white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          i {
-            margin: 0 6px 0 0;
+        tr {
+          display: block;
+          margin: 14px 20px;
+          text-align: left;
+          @include max-screen($breakpoint-sm) {
+            margin: 14px 20px;
+          }
+          th {
+            display: inline-block;
+            width: 300px;
+          }
+          td {
+            display: inline-block;
           }
         }
       }
+    }
+
+    .pticket {
+      position: relative;
+      margin: 30px auto;
+      width: 250px;
+      height: 110px;
+      background: #56ab48;
+      color: $color-base-white;
+      font-size: $fts-md;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 10px;
+      border: 3px solid $color-base-white;
+      overflow: hidden;
+      opacity: 1;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -8px;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        background-color: $color-base-white;
+        border-radius: 50%;
+      }
+      .inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        border: 3px dashed $color-base-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          margin: 0 6px 0 0;
+        }
+      }
+    }
   }
 
 }
