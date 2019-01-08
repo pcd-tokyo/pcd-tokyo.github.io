@@ -3,13 +3,13 @@ import setUA from './util/setUaBodyClass';
 import Util from './Util.js';
 import AOS from 'aos';
 
-import Map from './_map';
+//import Map from './_map';
 import P5Sketch from './P5Sketch'
 
 // Application entry point
 $(()=>{
   setUA();
-  Map();
+  //Map();
   AOS.init({
     once: true
   });

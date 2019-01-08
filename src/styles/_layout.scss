@@ -3,6 +3,7 @@
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
 .nav {
   position: fixed;
   top: 0;
@@ -291,7 +292,7 @@
           justify-content: space-between;
           align-items: flex-start;
           margin: 20px 0 0;
-          img {
+          img.thumb {
             width: 200px;
           }
           > div {
@@ -311,7 +312,7 @@
           @include max-screen($breakpoint-sm) {
             flex-direction: column;
             margin: 30px 30px 0;
-            img {
+            img.thumb {
               width: 100%;
             }
             > div {
@@ -378,7 +379,7 @@
             @include max-screen($breakpoint-sm) {
               flex-direction: column;
             }
-            img {
+            img.thumb {
               width: 227px;
               @include max-screen($breakpoint-sm) {
                 width: 100%;
