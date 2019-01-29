@@ -204,10 +204,13 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        border-bottom: 1px solid $color-gray01;
+        border-bottom: 1px dashed $color-gray01;
         margin: 0 34px;
         &:last-child {
           border: none;
+        }
+        &:nth-child(8) {
+          border-bottom: 2px solid $color-gray01;
         }
         .infomation {
           display: flex;
@@ -221,11 +224,13 @@
           .title {
             font-weight: bold;
             font-size: $fts-sm;
+            margin: 0 0 15px 0;
           }
           .speaker {
             font-size: $fts-sm;
-            line-height: 1.4em;
-            color: $color-gray01;
+            margin: 15px 0 0 0;
+            // line-height: 1.4em;
+            // color: $color-gray01;
           }
         }
         .label {
