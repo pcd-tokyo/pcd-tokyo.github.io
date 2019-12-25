@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="ja">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta property="og:title" content="Processing Community Day Tokyo">
+  <meta property="og:description" content="2019年2月2日、Yahoo!Lodgeにて開催。">
+  <meta property="og:url" content="https://pcd-tokyo.github.io">
+  <meta property="og:image" content="https://pcd-tokyo.github.io/images/ogp.png">
+  <meta property="og:type" content="website">
+  <meta property="fb:app_id" content="517860032058420" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="Processing Community Day Tokyo">
+  <meta name="twitter:title" content="Processing Community Day Tokyo">
+  <meta name="twitter:description" content="2019年2月2日、Yahoo!Lodgeにて開催。">
+  <meta name="twitter:image" content="https://pcd-tokyo.github.io/images/ogp.png">
+  <title>Processing Community Day Tokyo</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="../bundle.css">
+  <script src="../bundle.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131682964-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-131682964-1');
+  </script>
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <ul>
+      <li><a href="#about">PCDについて</a></li>
+      <li><a href="#event">イベント</a></li>
+      <li><a href="#ticket">チケット</a></li>
+    </ul>
+  </nav>
+</header><!-- /header -->
+<main class="main">
+  <section id="hero" class="hero">
+    <div id="p5canvas"></div>
+    <div id="borderCanvas">
+      <div class="border"></div>
+    </div>
+    <div class="hero__title">
+      <img style="width: 100%" src="./images/banner.svg" />
+    </div>
+  </section>
+  <section id="about" class="about">
+    <div class="container">
+      <h4 data-aos="fade-up">Processing（プロセッシング） とは？</h4>
+      <p data-aos="fade-up">マサチューセッツ工科大学メディアラボ発祥の教育用プログラミング言語で、世界中で親しまれています。プログラミングの入門だけでなく、メディア・アートや科学研究など幅広い分野で用いられています。</p>
+      <p data-aos="fade-up">
+        &gt; <a href="https://processing.org/">Processing</a><br>
+        &gt; <a href="https://processingfoundation.org/">Processing Foundation</a>
+      </p>
+      <h4 data-aos="fade-up">Processing Community Day（プロセッシング・コミュニティ・デー） とは？</h4>
+      <p data-aos="fade-up">Processing のユーザーの交流イベントで、アートとプログラミングのコミュニティの多様性を祝って世界各地で2019年1月15日から2月15日の間に開催されます。東京では2019年2月2日に Yahoo! LODGE にて開催されます。Processing のパイオニアや若手アーティストらによる講演やワークショップを通じて、クリエイティブなハックやアートに直に触れることができます。</p>
+      <p data-aos="fade-up">
+        &gt; <a href="https://www.facebook.com/events/420228961850467">facebook event page</a><br>
+        &gt; <a href="https://day.processing.org/">Processing Community Day Worldwide</a><br>
+        &gt; <a href="https://twitter.com/hashtag/PCD2019">#pcd2019</a><br>
+        &gt; <a href="https://twitter.com/hashtag/PCDTOKYO">#pcdtokyo</a>
+      </p>
+      <h4 data-aos="fade-up">具体的な企画は？</h4>
+      <p data-aos="fade-up">Processing を作品制作に活用しているアーティストや研究者の基調講演やライトニングトーク（一人5分程度のプレゼンテーション）、ワールドカフェ（オープンディスカッション）を企画しています。
+          また、初学者向けのワークショップや、インタラクティブ、グラフィック、デザイン、機械学習といった様々なテーマに特化したワークショップも行います。少人数に分かれての集中型のものを複数企画しているので、講師と対話しながら学ぶことができますので、初学者や独学者たちも奮ってご参加ください！</p>
+      <table data-aos="fade-up">
+        <tbody>
+          <tr><th>日時</th><td>2019年2月2日</td></tr>
+          <tr><th>場所</th><td>Yahoo! JAPANのオープンコラボレーションスペース「<a href="https://lodge.yahoo.co.jp/" target="_blank">LODGE</a>」</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section id="event">
+    <div class="container">
+      <h2 data-aos="fade-up" class="hdg__lv2">Event</h2>
+      <h3 data-aos="fade-up" class="hdg__lv3">Keynote</h3>
+      <div class="timetable__keynote">
+        <ul>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <h4><span>10:30-</span>Greeting</h4>
+              <p>PCD Tokyoのオープニングの挨拶をおこないます。代表して、稗田直人、永松歩、中西泰人が登壇します。以降のモデレータは中西泰人が務めます。</p>
+            </div>
+            <div class="speaker">
+              <img class="thumb" src="./images/key_naka.jpg" alt="speaker">
+              <div>
+                <h5>中西 泰人<a href="https://twitter.com/nakanaka" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h5>
+                <p>慶應義塾大学環境情報学部教授。感性情報処理、実世界指向インタフェース、モバイルアプリケーション の研究に従事。研究の一環としてメディアアートの制作や空間デザインを行う。作品として、画像処理による手指認識システムを用いたNarrative Hand，GPSカメラケータイを用いた時空間ポエマー、ワインバーdecfive，ユビキタスコンピューティング研究環境 EnhancedRoom、PAO ROOMなど。</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <h4><span>10:40-</span>デザインのためのコード/Code for Design</h4>
+              <p>コードをデザインするのではなく、コードでデザインする。
+                例えばジョセフ・アルバースによるモダンデザインの名著『配色の設計（Interaction of Color）』をp5.jsで模写してみる。
+                そこから見えてくるのは、色や形を数値で書くことの意味と、その可能性である。
+                記号の集まりとしての言語に意味を与えるのが構造である。
+                RGBとHSBの視覚的意味が異なるように、コードでデザインすることは、デザインの意味を明示化する。
+                それはまた、構造の中に潜む表現の可能性を顕在化する。
+                デザインと一体化したコードは単なるリテラシーを超えて、現代の社会で共有すべき思想となる。
+              </p>
+            </div>
+            <div class="speaker">
+              <img class="thumb" src="./images/key_kubota.jpg" alt="speaker">
+              <div>
+                <h5>久保田 晃弘<a href="https://twitter.com/hemokosa" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h5>
+                <p>1960年生まれ。多摩美術大学メディア芸術コース教授。近著に『遙かなる他者のためのデザイン』（BNN新社, 2017）『メディアアート原論』（共編著, フィルムアート社, 2018）『ニュー・ダーク・エイジ』（NTT出版, 監訳, 2018）などがある。</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <h4><span>11:20-</span>数学はアートを創るか? ーProcessingによる実践</h4>
+              <p><a href="https://www.slideshare.net/TatsukiHayama/processing-129986941" target="_blank">資料（slideshare）</a><br>
+                機械学習やデータサイエンスなど、データの数値処理に関連する数学は現在大きな注目を浴びています。
+                一方、そのような「コンピュータと相性のいい数学」は数学全体のごく一部であり、数学にはコンピュータで実装されていないたくさんのアイデアが残されています。
+                数値処理からは見えてこない数の構造からどのようなかたちが生成されるのか、それはアートと呼べる何かをつくりうるのか、についてProcessingによる作例を通じて考えます。</p>
+            </div>
+            <div class="speaker">
+              <img class="thumb" src="./images/key_hayama.jpg" alt="speaker">
+              <div>
+                <h5>巴山 竜来<a href="https://twitter.com/hayamatomoe" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h5>
+                <p>専修大学准教授。専門は数学（とくに複素幾何学）、および数学に関する視覚表現の実践。1982年奈良県生まれ。19年3月上旬に技術評論社より著書『数学から創るジェネラティブアート－Processingによるかたちのデザイン(仮題)』を刊行予定。</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <h3 data-aos="fade-up" class="hdg__lv3">Lightning Talk</h3>
+      <div data-aos="fade-up" class="timetable__lt">
+        <p>来場者のみなさまからライトニングトークをご応募いただきました。Processingに関する日頃の創作の成果や教育に関する考察など幅広いテーマが出そろいました！</p>
+        <!-- <div class="entrybutton"><a href="" target="_blank">応募する</a></div> -->
+      </div>
+      <div class="timetable__lt">
+        <ul>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">13:00</p>
+              <div>
+                <p class="speaker"><a href="http://naotohieda.com" target="_blank">Naoto Hieda</a></p>
+                <p class="title">イントロダクション（１）</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">13:15</p>
+              <div>
+                <p class="speaker"><a href="https://mizumasa.net" target="_blank">水落 大</a></p>
+                <p class="title">シェーダープログラムを無限に生成するガチャつくってみた</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">13:30</p>
+              <div>
+                <p class="speaker"><a href="https://kyabe.net" target="_blank">きゃべ（@cab_kyabe）</a></p>
+                <p class="title">Processingを活用してアニメーションLINEスタンプを作った話</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">13:45</p>
+              <div>
+                <p class="speaker"><a href="http://www.mkbtm.jp" target="_blank">真壁友</a></p>
+                <p class="title">Processing+Arduinoを使ったCNC機械と測定</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">14:00</p>
+              <div>
+                <p class="speaker"><a href="https://www.openprocessing.org/user/28204" target="_blank">サンセット</a></p>
+                <p class="title">Processingから学べたこと</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">14:15</p>
+              <div>
+                <p class="speaker"><a href="https://sato-masanori.jimdo.com/" target="_blank">佐藤 正範</a></p>
+                <p class="title">小学生とProcessingとテキスト入力に関する雑感</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">14:30</p>
+              <div>
+                <p class="speaker"><a href="https://codepen.io/r21nomi" target="_blank">r21nomi</a></p>
+                <p class="title">デジタルアートのプラットフォームサービスを開発している話</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">14:45</p>
+              <div>
+                <p class="speaker"><a href="https://shion.work/" target="_blank">Shion Fukushima</a></p>
+                <p class="title">監視社会とデータの可能性</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">15:00</p>
+              <div>
+                <p class="speaker"><a href="http://naotohieda.com" target="_blank">Naoto Hieda</a></p>
+                <p class="title">イントロダクション（２）</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">15:15</p>
+              <div>
+                <p class="speaker"><a href="http://cenkhor.org" target="_blank">高尾俊介</a></p>
+                <p class="title">p5.jsではじめるデイリーコーディングのススメ</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">15:30</p>
+              <div>
+                <p class="speaker"><a href="https://globalelite.black/" target="_blank">架旗透（かはたとおる）</a></p>
+                <p class="title">ProcessingでSF小説のカバーデザイン</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">15:45</p>
+              <div>
+                <p class="speaker"><a href="https://awrd.com/creatives/user/2977971/profile " target="_blank">Fallen-Angel_R-K</a></p>
+                <p class="title">Spout for Processingで実現するクリエイティブコーディングを用いたVJ</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">16:00</p>
+              <div>
+                <p class="speaker"><a href="https://twitter.com/guru_taka" target="_blank">ぐるたか</a></p>
+                <p class="title">クローム拡張機能でブラウザにp5.jsを召喚しよう！</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">16:15</p>
+              <div>
+                <p class="speaker"><a href="https://tagas.co.jp/" target="_blank">浅野桜</a></p>
+                <p class="title">デザイナー女子大生社長が美大で単位を取るまで記</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">16:30</p>
+              <div>
+                <p class="speaker"><a href="https://www.facebook.com/hironobu.nakamura.777" target="_blank">hironobu nakamura</a></p>
+                <p class="title">Processing x Science x Interaction</p>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="infomation">
+              <p class="time">16:45</p>
+              <div>
+                <p class="speaker"><a href="https://twitter.com/kajitaj63b3" target="_blank">梶田悠</a></p>
+                <p class="title">ノイズのすすめ</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <h3 data-aos="fade-up" class="hdg__lv3 is-red">Workshop</h3>
+      <div class="timetable__workshop">
+        <ul>
+          <li data-aos="fade-up">
+            <div class="ws">
+              <div class="ws__time">13:00~ / 15:00~</div>
+              <div class="ws__title">Processingでプログラミングに入門</div>
+              <div class="ws__description">
+                <h4>対象</h4>
+                <p>PCの扱い・キーボードによる英字入力に慣れている方であれば年齢・経験は問いません。
+                プログラミングに挑戦してみたい方、情報工学系の進路を検討されている学生の方、プログラミングおよびプログラミング教育に興味がある・導入を考えている先生や企業の方、アート系プログラミングに興味のあるエンジニアの方。 事前にProcessingをインストールしたノートPCをご持参ください。
+                あと、今話題の三角関数の話もするのでウッっとならない方😉</p>
+                <h4>概要</h4>
+                <p>Processingを使って、プログラミングに入門してみましょう！
+                本ワークショップではプログラミングの基本的な考え方やProcessingの面白いところを紹介しながら、
+                プログラムと数学のパワーできれいな「花」を描くことを目指します。
+                デジタルアート制作体験として、どうぞお気軽にご参加ください！</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="inner">
+                <div class="lecturer">
+                  <img class="thumb" src="./images/ws_reona.jpg" alt="speaker">
+                  <div>
+                    <h4>reona396<a href="https://twitter.com/reona396" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h4>
+                    <p>九州出身・東京在住インタラクションエンジニア/フロントエンドエンジニア/クリエイティブコーダー。<br>学生時代からProcessing、Processing.js、p5.jsでの作品作りやプログラミング教育に携わっている。</p>
+                  </div>
+                </div>
+              </dic>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="ws">
+              <div class="ws__time">13:00~</div>
+              <div class="ws__title">一歩先の3D表現</div>
+              <div class="ws__description">
+                <h4>対象</h4>
+                <p>Processingによる3D表現をもう一段階高めたい方（中級者）</p>
+                <h4>概要</h4>
+                <p>本ワークショップでは、Processing上で3D表現をする方の、「表現にもう一味加えたい！」という要望を叶える内容となっております。
+                シェーダを用いたポストエフェクトの使い方・インタラクションの加え方・パフォーマンスチューニングの基本方針など、予定ですが幅広く扱います！</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="inner">
+                <p class="lead"></p>
+                <div class="lecturer">
+                  <img class="thumb" src="./images/ws_cat.png" alt="speaker">
+                  <div>
+                    <h4>Yutaka "FMS_Cat" Obuchi<a href="https://twitter.com/FMS_Cat" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h4>
+                    <p>クリエイティブコーディング愛好家。都内の会社でエンジニアとして働いている。
+                      学生時代にProcessingでプログラミングの基礎を学び、現在はWebの世界を中心に、CGに関わるあらゆる活動を行っている。
+                      特に、シェーダを用いた表現を得意とし、単なるシェーディングにとどまらず、レイマーチング・パーティクルシステム・音楽生成といった表現までもGLSLを用いて行う。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="ws">
+              <div class="ws__time">13:00~ / 15:00~</div>
+              <div class="ws__title">ml5jsを使った機械学習プログラミング</div>
+              <div class="ws__description">
+                <h4>対象</h4>
+                <p>Processing、もしくはp5.jsの基本は知っている方向け。(setup、drawなどの基本構造や、基本図形を描ける程度)</p>
+                <h4>概要</h4>
+                <p><a href="https://ml5js.org/" target="_blank">ml5.js</a>という機械学習のためのJavaScriptのライブラリとp5.jsを組み合わせて、p5.js的な発想で機械学習のプログラミングを体験します。</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="inner">
+                <!-- <p class="lead"></p> -->
+                <div class="lecturer tado">
+                  <img class="thumb" src="./images/ws_tado.png" alt="speaker">
+                  <div>
+                    <h4>田所淳<a href="https://twitter.com/tadokoro" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h4>
+                    <p>1972年生まれ。クリエイティブコーダー。アルゴリズムを用いた音響合成による音楽作品の創作、音と映像によるライブコーディングによるパフォーマンスなどを行う。
+                      大学では、openFrameworks、p5.js、Processingなどの「クリエイティブ・コーディング」についての講義を行う。
+                      講義資料は Webサイト <a href="http://yoppa.org/" target="_blank">http://yoppa.org/</a> で公開、多くの学生やクリエイターに活用されている。
+                      著書に『Processing クリエイティブ・コーディング入門 - コードが生み出す創造表現』『演奏するプログラミング、ライブコーディングの思想と実践 ―Show Us Your Screens』など。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="ws">
+              <div class="ws__time">13:00~</div>
+              <div class="ws__title">Processingでオリジナルアートの作成</div>
+              <div class="flex-container">
+                <img class="ws__thumb" src="./images/ws_ritoco_seminar.jpg" />
+                <div class="ws__description">
+                  <h4>対象</h4>
+                  <p>Processingの初心者OK。
+                  持参するものはProcessingがインストールされたPC(Win,Mac問わず)、Twitterで #PCD2019 とツイートできる環境。</p>
+                  <h4>概要</h4>
+                  <p>Processing初心者、または入門してみたい方に向けての簡単なアート制作をするワークショップです。
+                  制作したものは <a href="https://twitter.com/hashtag/PCD2019">#pcd2019</a> のハッシュタグとともにツイートをしていただく予定です！
+                  世界で1つのオリジナルアートを制作してみませんか？ </p>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="inner">
+                <!-- <p class="lead"></p> -->
+                <div class="lecturer">
+                  <img class="thumb" src="./images/ws_ritoco.jpg" alt="speaker">
+                  <div>
+                    <h4>ritoco<a href="https://twitter.com/t_ritoco" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h4>
+                    <p>名古屋に住む21歳の大学生。TwitterやInstagramでの活動がメイン。Processingが生み出すモノでなにか出来ないかと日々探索。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="ws">
+              <div class="ws__time">13:00~ / 15:00~</div>
+              <div class="ws__title">ドローイングロボットの制御</div>
+              <div class="flex-container">
+                <img class="ws__thumb" src="./images/ws_scott_seminar.jpg" />
+                <div class="ws__description">
+                  <h4>対象</h4>
+                  <p>Processingでのデバイス制御，ディスプレイ外でのドローイング，プロッター制御による作品制作などに関心がある方。基礎を習得している方。</p>
+                  <h4>概要</h4>
+                  <p><a href="https://github.com/grbl/grbl">grbl</a>を用いたドローイングロボットを制御します．ファイル読み込みによる制御から始め，最終的に，私達が本人証明として行なっている直筆署名を入力に使用し，
+                  ドローイングロボットに署名の代行をさせてみます．</p>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="inner">
+                <!-- <p class="lead"></p> -->
+                <div class="lecturer">
+                  <img class="thumb" src="./images/ws_scottallen.jpg" alt="speaker">
+                  <div>
+                    <h4>Scott Allen<a href="https://twitter.com/Scott_Allen__" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h4>
+                    <p>像楽家，生像作家，慶應義塾大学環境情報学部非常勤講師．2016年情報科学芸術大学院大学（IAMAS）修了．投影装置の仕組みに物理的に介入したり，日用品に手を加えて像を作り出す．</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="ws">
+              <div class="ws__time">15:00~</div>
+              <div class="ws__title">ジェネラティブアート制作のアイディア</div>
+              <div class="ws__description">
+                <h4>対象</h4>
+                <p>Processingの基礎を習得済みで、プログラムによるアート制作を経験している方。<br>
+                  <a href="https://github.com/p5aholic/pcd-tokyo" target="_blank">資料（github）</a>
+                </p>
+                <h4>概要</h4>
+                <p>本ワークショップでは、私が今までのジェネラティブアート制作で培った作品のビジュアルを見た目に美しく、面白いものにするテクニックや制作手法などを実例を交えて解説します。</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="inner">
+                <div class="lecturer">
+                  <img class="thumb" src="./images/ws_nameraka.png" alt="speaker">
+                  <div>
+                    <h4>山田啓太（なめらかサンショウウオ）<a href="https://twitter.com/P5Aholic" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h4>
+                    <p>ProcessingやWebでジェネラティブアートを作るのが大好きです。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-aos="fade-up">
+            <div class="ws">
+              <div class="ws__time">15:00~</div>
+              <div class="ws__title">Processingでゲーム制作</div>
+              <div class="ws__description">
+                <h4>対象</h4>
+                <p>Processingの基本（drawやsetup、図形の描画、変数や関数って何？ など）を知っている人向け。<br>
+                クラスを多用しますが、フォローしますので自信なくても大丈夫です。<br>
+                Processingインストール済み、かつWifi接続可能なPCをご持参ください。</p>
+                <h4>概要</h4>
+                <p>Processingを使ったミニゲーム作りを体験することで、「画面上でいろんなものがリアルタイムに動くようなプログラムはどうやって作ればいいのか？」「動き、形、色……などなど、魅力的な表現のためにどのような工夫ができるのか？」といったことを知ることができます。<br>
+                ゲーム作りに興味がある人だけでなく、なにか動きのある作品を作ってみたい人や、プログラミング初心者の状態からちょっぴりステップアップしてみたい人にもお勧めです。</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="inner">
+                <div class="lecturer">
+                  <img class="thumb" src="./images/ws_fal.png" alt="speaker">
+                  <div>
+                    <h4>FAL<a href="https://twitter.com/falworks_ja" target="_blank"><img class="twi" src="./images/twitter-logo.png" /></a></h4>
+                    <p>インディーゲーム開発者／クリエイティブコーダー。<br>
+                      ゲーム制作のかたわら、Processingやp5.jsでスケッチを作る活動を続け、TwitterやWebサイト <a href="https://www.fal-works.com/" target="_blank">https://www.fal-works.com/</a> で公開している。 </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="twitter">
+    <div class="container">
+      <a class="twitter-timeline" data-height="1080" href="https://twitter.com/PCD_Tokyo?ref_src=twsrc%5Etfw">Tweets by PCD_Tokyo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </section>
+  <section id="ticket">
+    <div class="container">
+      <h2 data-aos="fade-up" class="hdg__lv2">Ticket</h2>
+      <div data-aos="fade-up" class="ticket__info">
+        <table>
+          <tbody>
+            <tr><th>入場チケット</th><td>1,000円</td></tr>
+            <tr><th>入場チケット+WS参加</th><td>3,000円</td></tr>
+          </tbody>
+        </table>
+        <p>※お一人様一つ講義を選択して受講することができます。<br>
+        ※ワークショップは1コマ10人が参加可能です。<br>
+        ※会場のキャパシティの問題からWS参加者の入場を優先いたします。<br>
+        ※チケット購入頂いたかたから順番にLT応募のフォームをお送りいたします。</p>
+        <a href="https://pcd-tokyo2019.peatix.com/" target="_blank">
+          <div class="pticket">
+            <div class="inner"><i class="fas fa-receipt"></i>Get in Peatix</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <p>&copy; PCD Tokyo </p>
+</footer>
+</body>
+</html>
