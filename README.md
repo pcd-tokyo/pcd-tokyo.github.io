@@ -5,6 +5,7 @@ Processing Community Day Tokyo Website
 required: node.js
 ```
 $ cd root-of-repo
+$ npm install -g gulp-cli
 $ npm i
 $ gulp release
 ```
