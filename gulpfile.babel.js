@@ -108,7 +108,8 @@ gulp.task( 'release:copy', () => {
     config.dir.assets + '*.html',
     config.dir.assets + 'fonts/**',
     config.dir.assets + 'images/**',
-    config.dir.assets + 'vendor/**'
+    config.dir.assets + 'vendor/**',
+    config.dir.assets + '2019/**/*',
   ];
 
   return gulp.src( src, { base: config.dir.assets } )
