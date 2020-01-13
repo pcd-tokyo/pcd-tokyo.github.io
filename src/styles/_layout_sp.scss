@@ -29,7 +29,7 @@
             font-size: calcVW($fts-sm*$sp-size , $base_width);
             img {
               width: calcVW(30*$sp-size , $base_width);
-              height: auto;
+              height: calcVW(30*$sp-size , $base_width);
             }
           }
         }
