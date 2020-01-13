@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 body {
-  font-family: 'Nunito','Noto Sans JP', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: 'Source Code Pro','Noto Sans JP', sans-serif;
 }
 
 html {
@@ -24,6 +24,7 @@ body {
   background: $color-base-white;
   color: $color-base-black;
   font-size: 16px;
+  font-feature-settings: "palt";
   @include min-screen($breakpoint-lg){
 
   }
@@ -35,17 +36,26 @@ body {
   box-sizing: border-box;
 }
 
-p,a {
-  color: $color-base-black;
-  font-size: $fts-sm;
-  line-height: 2em;
+section{
+  width: 100%;
+  text-align: center;
+  a{
+    padding-bottom: 0.3vw;
+    border-bottom: 0.1vw solid $color-base-white;
+  }
+}
+
+p,h4 {
+  color: $color-base-white;
 }
 
 a {
   text-decoration: none;
-  color: $key-blue;
   &:hover {
     opacity: .7;
+  }
+  &:link,&:visited,&:hover,&:active {
+    color: $color-base-white;
   }
 }
 
@@ -53,22 +63,4 @@ ul,li {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-h1,h2,h3 {
-  margin: 0;
-  padding: 0;
-  font-family: Georgia, serif;
-  font-weight: 700;
-}
-
-h4,h5,h6 {
-  margin: 0;
-  padding: 0;
-}
-
-img.twi {
-  width: 24px;
-  margin: 0 0 0 32px;
-  vertical-align: sub;
 }

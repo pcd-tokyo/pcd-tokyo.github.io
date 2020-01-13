@@ -64,3 +64,8 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+//pxをvwに変換する
+@function calcVW($size,$base_width){
+	@return ($size / $base_width * 100) + vw;
+}

@@ -4,8 +4,8 @@
 //
 // Styleguide variables
 
-$color-base-black: #363636;
-$color-base-white: #ffffff;
+$color-base-black: #000;
+$color-base-white: #fff;
 $color-gray01: #b3b3b3;
 
 $key-blue: #5161f2;
@@ -16,10 +16,11 @@ $key-gray: #d8d8d8;
 $fts-lg: 32px;
 $fts-lm: 28px;
 $fts-md: 24px;
-$fts-sm: 16px;
+$fts-sm: 18;
 $fts-ss: 14px;
 $fts-es: 12px;
 
+$sp-size: 1.5;
 
 $breakpoint-xl: 1600px;
 $breakpoint-lg: 1280px;

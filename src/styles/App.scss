@@ -4,9 +4,5 @@
 @import "configs/variables";
 
 @import "base";
-@import "layout";
-
-@import "./components/header";
-@import "./components/footer";
-
-@import "./components/container";
+@import "layout_pc";
+@import "layout_sp";
