@@ -29,6 +29,7 @@
             font-size: calcVW($fts-sm*$sp-size , $base_width);
             img {
               width: calcVW(30*$sp-size , $base_width);
+              height: auto;
             }
           }
         }
@@ -44,7 +45,7 @@
   }
 
   .main {
-    #about,#event,#ticket,#sns{
+    #about,#event,#participation,#workshop,#ticket,#sns{
       padding: calcVW(100*$sp-size , $base_width) 0;
     }
   }

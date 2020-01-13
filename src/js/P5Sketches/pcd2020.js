@@ -123,7 +123,9 @@ module.exports = (p) => {
         p.pop();
     }
     p.windowResized = () => {
-        p.resizeCanvas(screen.width, screen.height);
+        if (p.dist(screen.width, screen.height, p.width, p.height) > 300) {
+            p.resizeCanvas(screen.width, screen.height);
+        }
     }
 
 }
