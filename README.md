@@ -2,7 +2,9 @@
 Processing Community Day Tokyo Website
 
 # Build
-required: node.js
+required: node.js  
+※ Under node v12.x env, the build will fail by [issue with gulp v3 and node v12.x](https://timonweb.com/posts/how-to-fix-referenceerror-primordials-is-not-defined-error/).  
+node v10.x is recommended.
 ```
 $ cd root-of-repo
 $ npm install -g gulp-cli
