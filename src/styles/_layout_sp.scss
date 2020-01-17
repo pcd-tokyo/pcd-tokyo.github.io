@@ -11,7 +11,7 @@
   $base_width: 750;
 
   .pc{
-		display: none !important; 
+		display: none !important;
   }
 
   .nav {
@@ -200,252 +200,34 @@
     }
   }
 
-  // .timetable {
-  //   &__lt {
-  //     padding: 5px;
-  //     background-color: #fff;
-  //     ul {
-  //       li {
-  //         display: flex;
-  //         justify-content: space-between;
-  //         align-items: flex-start;
-  //         border-bottom: 1px dashed $color-gray01;
-  //         margin: 0 34px;
-  //         &:last-child {
-  //           border: none;
-  //         }
-  //         &:nth-child(8) {
-  //           border-bottom: 2px solid $color-gray01;
-  //         }
-  //         .infomation {
-  //           display: flex;
-  //           justify-content: flex-start;
-  //           align-items: flex-start;
-  //           .time {
-  //             font-size: $fts-sm;
-  //             color: $key-blue;
-  //             padding: 0 15px 0 10px;
-  //           }
-  //           .title {
-  //             font-weight: bold;
-  //             font-size: $fts-sm;
-  //             margin: 0 0 15px 0;
-  //           }
-  //           .speaker {
-  //             font-size: $fts-sm;
-  //             margin: 15px 0 0 0;
-  //             // line-height: 1.4em;
-  //             // color: $color-gray01;
-  //           }
-  //         }
-  //         .label {
-  //           min-width: 120px;
-  //           margin: 0 0 0 10px;
-  //           display: flex;
-  //           flex-direction: column;
-  //           justify-content: center;
-  //           align-items: center;
-  //           p {
-  //             padding: 0 22px;
-  //             background-color: $key-blue;
-  //             color: $color-base-white;
-  //             font-size: $fts-sm;
-  //             display: flex;
-  //             align-items: center;
-  //             text-align: center;
-  //           }
-  //           a {
-  //             i {
-  //               font-size: 15px;
-  //               margin: 0 0 0 3px;
-  //               transform: translateY(-1px);
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  //   &__keynote {
-  //     ul {
-  //       li {
-  //         background-color: $color-base-white;
-  //         display: flex;
-  //         flex-direction: column;
-  //         justify-content: flex-start;
-  //         align-items: center;
-  //         padding: 20px;
-  //         border-bottom: 1px solid $color-gray01;
-  //         &:last-child {
-  //           border: none;
-  //         }
-  //         .infomation {
-  //           width: 100%;
-  //           h4 {
-  //             font-size: $fts-lm;
-  //             font-weight: bold;
-  //             line-height: 1.4em;
-  //             color: $sub-blue;
-  //             span {
-  //               padding: 0 10px 0 0;
-  //               color: $key-blue;
-  //               font-size: $fts-md;
-  //               font-weight: normal;
-  //               @include max-screen($breakpoint-sm) {
-  //                 display: block;
-  //               }
-  //             }
-  //           }
-  //           p {
-  //             margin: 30px 0 10px;
-  //             line-height: 1.6;
-  //           }
-  //         }
-  //         .speaker {
-  //           display: flex;
-  //           justify-content: space-between;
-  //           align-items: flex-start;
-  //           margin: 20px 0 0;
-  //           img.thumb {
-  //             width: 200px;
-  //           }
-  //           > div {
-  //             padding: 20px;
-  //             h5 {
-  //               color: $sub-blue;
-  //               font-size: $fts-md;
-  //               font-weight: bold;
-  //               line-height: 1.6em;
-  //               margin: 0 0 8px;
-  //             }
-  //             p {
-  //               margin: 0;
-  //               line-height: 1.6;
-  //             }
-  //           }
-  //           @include max-screen($breakpoint-sm) {
-  //             flex-direction: column;
-  //             margin: 30px 30px 0;
-  //             img.thumb {
-  //               width: 100%;
-  //             }
-  //             > div {
-  //               padding: 10px 0 30px;
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  //   &__workshop {
-  //     color: $key-blue;
-  //     background: rgba(255, 255, 255, 0.7);
-  //     padding: 0 0 20px;
-  //     ul {
-  //       li {
-  //         .ws {
-  //           position: relative;
-  //           width: 100%;
-  //           padding:192px 20px 15px;
-  //           .flex-container {
-  //             display: flex;
-  //             align-items: flex-start;
-  //             @include max-screen($breakpoint-sm) {
-  //               flex-direction: column;
-  //             }
-  //           }
-  //           &__time {
-  //             color: $key-blue;
-  //             line-height: 1em;
-  //             margin: 0;
-  //             padding: 0;
-  //           }
-  //           &__title {
-  //             font-size: $fts-lm;
-  //             line-height: 1em;
-  //             font-weight: bold;
-  //             margin: 10px 0;
-  //             padding: 0;
-  //           }
-  //           &__thumb {
-  //             width: 309px;
-  //             margin: 28px 20px 0 10px;
-  //             @include max-screen($breakpoint-sm) {
-  //               width: 100%;
-  //               margin: 10px 0;
-  //             }
-  //           }
-  //           &__description {
-  //             position: relative;
-  //             margin: 0;
-  //             padding: 10px 2px;
-  //             h4 {
-  //               color: $color-base-black;
-  //             }
-  //           }
-  //         }
+  #participation {
+    .timetable {
+      ul {
+        li {
+          .information {
+            display: block;
 
-  //         .content {
-  //           position: relative;
-  //           z-index: 1;
-  //           background-color: $sub-blue;
-  //           margin: 0 20px;
-  //           p {
-  //             margin: 0;
-  //             &.lead {
-  //               font-size: $fts-ss;
-  //               color: $color-base-white;
-  //               line-height: 1.6;
-  //             }
-  //           }
-  //           .inner {
-  //             padding: 10px;
-  //           }
-  //           .lecturer {
-  //             display: flex;
-  //             justify-content: flex-start;
-  //             align-items: flex-start;
-  //             background: $color-base-white;
-  //             @include max-screen($breakpoint-sm) {
-  //               flex-direction: column;
-  //             }
-  //             img.thumb {
-  //               width: 227px;
-  //               @include max-screen($breakpoint-sm) {
-  //                 width: 100%;
-  //               }
-  //             }
-  //             > div {
-  //               padding: 0 20px 0;
-  //               h4 {
-  //                 font-size: $fts-lm;
-  //                 color: $color-base-black;
-  //                 margin: 16px 0 8px;
-  //                 line-height: 1.6;
-  //               }
-  //               p {
-  //                 font-size: $fts-ss;
-  //                 color: $color-base-black;
-  //                 line-height: 1.6;
-  //                 padding: 0 0 10px;
-  //               }
-  //             }
-  //             &.tado {
-  //               > div {
-  //                 h4 {
-  //                   margin: 6px 0 0px;
-  //                   font-size: $fts-lm - 6px;
-  //                   @include max-screen($breakpoint-sm) {
-  //                     margin: 16px 0 8px;
-  //                     font-size: $fts-lm;
-  //                   }
-  //                 }
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+            .time {
+              padding: 0;
+            }
 
+            .info-container {
+              .bottom-content {
+                display: block;
+                .category {
+                  font-size: $fts-es;
+                  padding: 2px 8px;
+                }
+                .speaker {
+                  display: block;
+                  text-align: left;
+                  margin-top: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -256,7 +256,8 @@
   }
 
   #participation {
-    .lightning-talk {
+    .timetable {
+      padding-top: 30px;
       ul {
         li {
           display: flex;
@@ -266,22 +267,43 @@
           &:last-child {
             border: none;
           }
-          &:nth-child(8) {
-            border-bottom: 2px solid $color-gray01;
-          }
           .information {
+            width: 100%;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             .time {
               padding: 0 15px 0 10px;
             }
-            .title {
-              font-weight: bold;
-              font-size: $fts-sm;
-            }
-            .speaker {
-              font-size: $fts-sm;
+            .info-container {
+              flex: 1;
+              .title {
+                font-weight: bold;
+                font-size: $fts-sm;
+              }
+              .bottom-content {
+                display: flex;
+                align-items: center;
+                .category {
+                  font-size: $fts-ss;
+                  padding: 2px 8px;
+
+                  &.category__lt {
+                    background-color: $color-category-lt;
+                  }
+                  &.category__talk-session {
+                    background-color: $color-category-talk-session;
+                  }
+                  &.category__live-coding {
+                    background-color: $color-category-live-coding;
+                  }
+                }
+                .speaker {
+                  flex: 1;
+                  font-size: $fts-sm;
+                  text-align: right;
+                }
+              }
             }
           }
         }
