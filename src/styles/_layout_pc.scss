@@ -203,6 +203,18 @@
     }
   }
 
+  #event, #workshop {
+    .container {
+      .time {
+        padding-top: calcVW(50 , $base_width);
+      }
+      h4 {
+        padding: 0;
+        margin-top: 0;
+      }
+    }
+  }
+
   #ticket{
     .detail{
       padding-top: calcVW(50 , $base_width);
