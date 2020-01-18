@@ -267,54 +267,52 @@
     color: $color-base-white;
   }
 
-  #participation {
-    .timetable {
-      padding-top: 30px;
-      ul {
-        li {
+  .timetable {
+    padding-top: 30px;
+    ul {
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px dashed $color-gray01;
+        &:last-child {
+          border: none;
+        }
+        .information {
+          width: 100%;
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           align-items: flex-start;
-          border-bottom: 1px dashed $color-gray01;
-          &:last-child {
-            border: none;
+          .time {
+            padding: 0 15px 0 10px;
           }
-          .information {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            .time {
-              padding: 0 15px 0 10px;
+          .info-container {
+            flex: 1;
+            .title {
+              font-weight: bold;
+              font-size: $fts-sm;
             }
-            .info-container {
-              flex: 1;
-              .title {
-                font-weight: bold;
-                font-size: $fts-sm;
-              }
-              .bottom-content {
-                display: flex;
-                align-items: center;
-                .category {
-                  font-size: $fts-ss;
-                  padding: 2px 8px;
+            .bottom-content {
+              display: flex;
+              align-items: center;
+              .category {
+                font-size: $fts-ss;
+                padding: 2px 8px;
 
-                  &.category__lt {
-                    background-color: $color-category-lt;
-                  }
-                  &.category__talk-session {
-                    background-color: $color-category-talk-session;
-                  }
-                  &.category__performance {
-                    background-color: $color-category-performance;
-                  }
+                &.category__lt {
+                  background-color: $color-category-lt;
                 }
-                .speaker {
-                  flex: 1;
-                  font-size: $fts-sm;
-                  text-align: right;
+                &.category__talk-session {
+                  background-color: $color-category-talk-session;
                 }
+                &.category__performance {
+                  background-color: $color-category-performance;
+                }
+              }
+              .speaker {
+                flex: 1;
+                font-size: $fts-sm;
+                text-align: right;
               }
             }
           }
