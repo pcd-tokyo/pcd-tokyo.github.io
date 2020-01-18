@@ -170,7 +170,6 @@ $base_width: 1280;
     font-size: calcVW(16 , $base_width);
     letter-spacing: (1.4 / $base_width * 100) + em;
     line-height: 2;
-    overflow: scroll;
   }
   .link{
     font-size: calcVW(12 , $base_width);
