@@ -200,30 +200,55 @@
     }
   }
 
+  .timetable {
+    .information {
+      .time, .info-container .title {
+        font-size: $fts-ss;
+        line-height: 1.6rem;
+      }
+    }
+  }
+  #timetable {
+    .timetable {
+      .information {
+        .time {
+          padding-left: 0;
+        }
+        &.item-workshop-for-kids {
+          display: block;
+
+          .time {
+            margin-bottom: 0;
+          }
+          .info-container {
+            .title {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
   #participation {
     .timetable {
-      ul {
-        li {
-          .information {
+      .information {
+        display: block;
+
+        .time {
+          padding: 0;
+        }
+
+        .info-container {
+          .bottom-content {
             display: block;
-
-            .time {
-              padding: 0;
+            .category {
+              font-size: $fts-es;
+              padding: 2px 8px;
             }
-
-            .info-container {
-              .bottom-content {
-                display: block;
-                .category {
-                  font-size: $fts-es;
-                  padding: 2px 8px;
-                }
-                .speaker {
-                  display: block;
-                  text-align: left;
-                  margin-top: 16px;
-                }
-              }
+            .speaker {
+              display: block;
+              text-align: left;
+              margin-top: 16px;
             }
           }
         }
