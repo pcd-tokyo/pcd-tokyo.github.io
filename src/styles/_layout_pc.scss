@@ -58,6 +58,7 @@ $base_width: 1280;
           font-size: calcVW($fts-sm , $base_width);
           color: $color-base-white;
           display: flex;
+          display: -webkit-box;
           img {
             width: calcVW(30 , $base_width);
           }
