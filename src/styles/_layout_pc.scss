@@ -270,11 +270,16 @@ $base_width: 1280;
   padding-top: 30px;
   .two-column {
     display: flex;
-    align-items: center;
     border-bottom: 1px dashed $color-gray01;
 
     .column {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      &.column-right {
+        padding-left: 20px;
+      }
     }
   }
   .information {
@@ -320,7 +325,8 @@ $base_width: 1280;
       border: none;
     }
     &.item-workshop-for-kids {
-      padding-left: 20px;
+      flex: 1;
+      align-items: center;
       border: none;
     }
     &.item-presentation {
