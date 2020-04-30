@@ -44,7 +44,7 @@
     "extract-svg-path": "^2.1.0",
     "fullcalendar": "^3.9.0",
     "gmaps": "^0.4.24",
-    "jquery": "^3.1.1",
+    "jquery": "^3.5.0",
     "load-svg": "^1.0.0",
     "natives": "^1.1.6",
     "normalize.css": "^5.0.0",
