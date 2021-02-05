@@ -630,6 +630,9 @@ ul {
   .navigation li {
     font-size: 18px;
   }
+  #background{
+    min-height: 670px;
+  }
   #p5canvas {
     top: 42%;
   }
