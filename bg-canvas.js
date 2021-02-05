@@ -5,12 +5,12 @@ var sketch = function(p){
   p.backCol = ["#2B2F2F", "#4B5353"];
   
   p.xoff = 0.1;
-  p.scl;
-  p.count = 60;
+  p.scl = 40;
+  p.count;
   
   p.setup = function() {
     p.bg = p.createCanvas(p.windowWidth, p.windowHeight);
-    p.scl = p.width / p.count;
+    p.count = p.scl / p.width;
     p.noStroke();
     p.createGrid();
   }
@@ -55,6 +55,7 @@ p.draw  = function() {
     }
   }
 }
+
 new p5(sketch, window.document.getElementById('p5canvas'));
 new p5(sketch, window.document.getElementById('bgcanvas'));
 
