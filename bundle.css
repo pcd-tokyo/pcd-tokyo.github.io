@@ -37,6 +37,10 @@
   margin-bottom: 8rem;
 }
 
+.margin-bottom-small{
+  margin-bottom: 1rem;
+}
+
 .background-white {
   background-color: white;
 }
@@ -539,7 +543,7 @@ flex-basis: 50%;
 .section-wrap {
   position: relative;
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
   max-width: 80%;
   padding: 3rem;
   box-shadow: 16px 16px var(--shadow-purple);
@@ -622,7 +626,7 @@ flex-basis: 50%;
   }
   #notice {
     font-size: 32px;
-    top: 60%;
+    top: 55%;
   }
   #link-to-gallery {
     top: auto;
@@ -634,6 +638,7 @@ flex-basis: 50%;
   }
   .section-wrap {
     width: auto;
+    max-width: 100%;
     margin-left: 1rem;
     margin-right: 2rem;
     padding: 1rem;
