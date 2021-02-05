@@ -1,527 +1,262 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="ja" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:title" content="Processing Community Day Tokyo" />
+    <meta
+      property="og:description"
+      content="2021年2月20・21日オンライン開催！Processing Community Day Japan 2021"
+    />
+    <meta property="og:url" content="https://pcd-tokyo.github.io" />
+    <meta
+      property="og:image"
+      content="https://pcd-tokyo.github.io/images/ogp.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="517860032058420" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Processing Community Day Tokyo" />
+    <meta name="twitter:title" content="Processing Community Day Tokyo" />
+    <meta
+      name="twitter:description"
+      content="2021年2月20・21日オンライン開催！Processing Community Day Japan 2021"
+    />
+    <meta
+      name="twitter:image"
+      content="https://pcd-tokyo.github.io/images/ogp.png"
+    />
+    <title>Processing Community Day Japan 2021</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="bundle.css" />
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="libraries/p5.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Noto+Sans+JP&display=swap&amp;subset=japanese"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131682964-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-131682964-1");
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500&display=swap");
+    </style>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="content-language" content="ja">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no,address=no,email=no">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta property="og:title" content="Processing Community Day Tokyo">
-  <meta property="og:description" content="2020年2月1日、Yahoo!Lodgeにて開催。">
-  <meta property="og:url" content="https://pcd-tokyo.github.io">
-  <meta property="og:image" content="https://pcd-tokyo.github.io/images/ogp.png">
-  <meta property="og:type" content="website">
-  <meta property="fb:app_id" content="517860032058420" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="Processing Community Day Tokyo">
-  <meta name="twitter:title" content="Processing Community Day Tokyo">
-  <meta name="twitter:description" content="2020年2月1日、Yahoo!Lodgeにて開催。">
-  <meta name="twitter:image" content="https://pcd-tokyo.github.io/images/ogp.png">
-  <title>Processing Community Day Tokyo 2020</title>
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="bundle.css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Noto+Sans+JP&display=swap&amp;subset=japanese"
-    rel="stylesheet">
-  <script src="bundle.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131682964-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-131682964-1');
-  </script>
-</head>
-
-<body>
-  <header class="header">
-    <nav class="nav">
-      <div>
-        <a href="#hero">PCDTokyo2020</a>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#event">Event</a></li>
-          <li><a href="#ticket">Ticket</a></li>
-          <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpcd-tokyo.github.io%2F"
-              target="_blank"><img src="./images/facebook.png" alt="Facebook"></a></li>
-          <li><a
-              href="https://twitter.com/intent/tweet?text=Processing%20Community%20Day%20Tokyo%202020%0D%0A2020%E5%B9%B42%E6%9C%881%E6%97%A5%E3%80%81Yahoo%21Lodge%E3%81%AB%E3%81%A6%E9%96%8B%E5%82%AC%E3%80%82%0D%0Ahttps%3A%2F%2Fpcd-tokyo.github.io%2F%0D%0A%23Processing%20%23PCD2020"
-              target="_blank" rel="noopener noreferrer"
-              data-txt="Processing%20Community%20Day%20Tokyo%2020202020年2月1日、Yahoo!Lodgeにて開催。https://pcd-tokyo.github.io/#Processing%20#PCD2020"><img
-                src="./images/twitter.png" alt="Twitter"></a></li>
-        </ul>
-      </div>
-    </nav>
-  </header><!-- /header -->
-  <main class="main">
-    <section id="hero" class="hero">
-      <div id="p5canvas"></div>
-      <div class="hero__title">
-        <img style="width: 100%" src="./images/logo.svg" />
-      </div>
-    </section>
-    <section id="about" class="about">
-      <h2 data-aos="fade-up" class="hdg__lv2">About</h2>
-      <div class="container" data-aos="fade-up">
-        <h4>PCDとは</h4>
-        <p class="txt">
-          PCDとは、Processing Community Day(プロセッシング・コミュニティー・デー)の略です。<br>
-          Processing のユーザーの交流イベントで、アートとプログラミングのコミュニティの多様性を祝って<br class="pc">
-          世界各地で2020年上半期の間に開催されます。<br>
-          東京では Yahoo! JAPAN 様の協力のもと、2020年2月1日に Yahoo! LODGE にて開催されます。<br>
-          Processing のパイオニアや若手アーティストらによる講演やワークショップを通じて、<br class="pc">
+  <body>
+    <header class="header">
+      <section id="hero" class="hero">
+        <nav class="navigation">
+          <ul>
+            <a href="#about"><li><span class="c1">P</span>CDとは</li></a>
+            <a href="#summary"><li><span class="c1">開</span>催概要</li></a>
+            <a href="#timetable"><li><span class="c1">タ</span>イムテーブル</li></a>
+            <a href="#keynote"><li><span class="c1">キ</span>ーノート</li></a>
+            <a href="#workshop"><li><span class="c1">ワ</span>ークショップ</li></a>
+            <a href=""><li><span class="c1">ス</span>ポンサー</li></a>
+          </ul>
+        </nav>
+        <div id="background"></div>
+        <div id="bgcanvas"></div>
+        <div id="shadow-image"><img src="images/logo-2021.svg" /></div>
+        <div id="p5canvas"></div>
+        <div id="gallery"><a id="link-to-gallery" href="https://pcd-tokyo-gallery.vercel.app/" target="_blank"><img src="images/gallery.svg">作品ギャラリーはこちら</a></div>
+        <div id="notice">2/<span id="date">20, 21</span><span id="online">@Online</span></div>
+      </section>
+    </header>
+    <!-- /header -->
+    <main class="main">
+      <section id="about" class="section-wrap background-white section-top-margin">
+        <h3 class="HEAD1">PCDとは</h3>
+        <div>
+          PCDとは、Processing Community
+          Day(プロセッシング・コミュニティー・デー)の略です。<br />
+          Processing
+          のユーザーの交流イベントで、アートとプログラミングのコミュニティの多様性を祝って<br
+            class="pc"
+          />
+          世界各地で2020年上半期の間に開催されます。<br />
+          東京では Yahoo! JAPAN 様の協力のもと、2020年2月1日に Yahoo! LODGE
+          にて開催されます。<br />
+          Processing
+          のパイオニアや若手アーティストらによる講演やワークショップを通じて、<br
+            class="pc"
+          />
           クリエイティブなハックやアートに直に触れることができます。
-        </p>
+        </div>
         <p class="link">
-          &gt; <a href="https://processingfoundation.org/advocacy/processing-community-day-2020">Processing Community
-            Day Worldwide</a><br>
-          &gt; <a href="https://pcd-tokyo.github.io/2019" target="_blank">PCD Tokyo 2019 ウェブサイト</a><br>
-          &gt; <a href="https://note.com/naoto_hieda/n/n9701649bba32" target="_blank">PCD Tokyo 2019 レポート（稗田）</a><br>
-          &gt; <a href="https://ayumu-nagamatsu.com/archives/875/" target="_blank">PCD Tokyo 2019 レポート（永松）</a>
+          &gt;
+          <a
+            href="https://processingfoundation.org/advocacy/processing-community-day-2020"
+            >Processing Community Day Worldwide</a
+          ><br />
+          <a href="https://pcd-tokyo.github.io/2019/">> PCD Tokyo 2020 ウェブサイト</a>
+          <br>
+          &gt;
+          <a href="https://pcd-tokyo.github.io/2019" target="_blank"
+            >PCD Tokyo 2019 ウェブサイト</a
+          ><br />
+          &gt;
+          <a
+            href="https://note.com/naoto_hieda/n/n9701649bba32"
+            target="_blank"
+            >PCD Tokyo 2019 レポート（稗田）</a
+          ><br />
+          &gt;
+          <a href="https://ayumu-nagamatsu.com/archives/875/" target="_blank"
+            >PCD Tokyo 2019 レポート（永松）</a
+          >
         </p>
-        <h4>Processingとは</h4>
-        <p class="txt">
-          マサチューセッツ工科大学メディアラボ発祥の教育用プログラミング言語で、世界中で親しまれています。<br>
-          プログラミングの入門だけでなく、メディア・アートや科学研究など幅広い分野で用いられています。
-        </p>
+      </section>
+      <section id="about-processing" class="section-wrap white background-purple700"><h4 class="HEAD2">Processingとは</h4>
+        <div>マサチューセッツ工科大学メディアラボ発祥の教育用プログラミング言語で、世界中で親しまれています。プログラミングの入門だけでなく、メディア・アートや科学研究など幅広い分野で用いられています。</div>
         <p class="link">
-          &gt; <a href="https://processing.org/" target="_blank">Processing</a><br>
-          &gt; <a href="https://processingfoundation.org/" target="_blank">Processing Foundation</a>
+          &gt; <a href="https://processing.org/" target="_blank">Processing</a
+          ><br />
+          &gt;
+          <a href="https://processingfoundation.org/" target="_blank"
+            >Processing Foundation</a
+          >
         </p>
-        <h4>具体的な企画は？</h4>
-        <p class="txt">
-          Processing を作品制作に活用しているアーティストや<br class="pc">
-          研究者の基調講演やライトニングトーク（一人10分程度のプレゼンテーション）等を企画しています。 <br>
-          また、初学者向けのワークショップや、インタラクティブ、グラフィック、デザイン、機械学習といった<br class="pc">
-          様々なテーマに特化したワークショップも行います。<br>
-          少人数に分かれての集中型のものを複数企画しており、講師と対話しながら学ぶことができますので、<br class="pc">
-          初学者や独学者たちも奮ってご参加ください！
-        </p>
-      </div>
-      <div class="container" data-aos="fade-up">
-        <h4>PCD Tokyo 2020</h4>
-        <div class="detail">
-          <dl>
-            <dt>日時</dt>
-            <dd>2020.2.1 土</dd>
-          </dl>
-          <dl>
-            <dt>場所</dt>
-            <dd>Yahoo! JAPANのオープンコラボレーションスペース「<a href="https://lodge.yahoo.co.jp/" target="_blank">LODGE</a>」</dd>
-            <dd>ヤフー株式会社 17階セミナールーム</dd>
-          </dl>
-          <dl>
-            <dt>時間</dt>
-            <dd>10:30 AM - 6:00 PM</dd>
-          </dl>
-          <dl>
-            <dt>入場料</dt>
-            <dd>1,000円～ (※詳しくは<a href="#ticket">こちら</a>)</dd>
-          </dl>
-          <dl>
-            <dt>ハッシュタグ</dt>
-            <dd><a href="https://twitter.com/intent/tweet?hashtags=PCD2020" target="_blank">#PCD2020</a></dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section id="timetable">
-      <h2 data-aos="fade-up" class="hdg__lv2">Timetable</h2>
-      <div class="container" data-aos="fade-up">
-        <div class="timetable">
-          <ul>
-            <li class="two-column">
-              <div class="column">
-                <div class="information">
-                  <p class="time">10:00</p>
-                  <div class="info-container">
-                    <p class="title">受付開始</p>
-                  </div>
-                </div>
-
-                <div class="information">
-                  <p class="time">10:30</p>
-                  <div class="info-container">
-                    <p class="title">主宰挨拶</p>
-                  </div>
-                </div>
-
-                <div class="information item-keynote">
-                  <p class="time">10:40</p>
-                  <div class="info-container">
-                    <p class="title"><a href="#event">キーノート</a></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="column column-right">
-                <div class="information">
-                  <p class="time">09:30</p>
-                  <div class="info-container">
-                    <p class="title">ワークショップ受付開始</p>
-                  </div>
-                </div>
-
-                <div class="information item-workshop-for-kids">
-                  <p class="time">10:00</p>
-                  <div class="info-container">
-                    <p class="title"><a href="#workshop-for-kids">小中学生向けワークショップ</a></p>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">12:00</p>
-                <div class="info-container">
-                  <p class="title">ランチ休憩</p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information item-presentation">
-                <p class="time">13:00</p>
-                <div class="info-container">
-                  <p class="title"><a href="#participation">プレゼンテーション</a>・<a href="#workshop">ワークショップ</a></p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">17:00</p>
-                <div class="info-container">
-                  <p class="title">お悩み相談室</p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">18:00</p>
-                <div class="info-container">
-                  <p class="title">閉会</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="event">
-      <h2 data-aos="fade-up" class="hdg__lv2">Keynote</h2>
-      <div class="container" data-aos="fade-up">
-        <p class="time">10:40</p>
-        <h4>杉原 聡「Processingによる建築設計 － コンピュテーショナルデザインの実践」</h4>
-        <p class="txt">
-          建築分野において、ルールやアルゴリズムで建築設計を行うコンピュテーショナル・デザインが近年広まっています。2007年よりコンピュテーショナル・デザイナーとして活動している講演者がコンピューター・サイエンス→メディア・アート→建築と分野を遷り変る中での３Dコンピュテーション環境の変遷や、コンピュテーショナル・デザインに必要な知識や代表的な手法、またそれを用いて設計・建設されたプロジェクトを通じて、コンピュテーションによって可能となった建築の形を紹介します。<br>
-        </p>
-        <!-- <div class="speaker">
-          <img class="thumb" src="./images/key_sugihara.jpg" alt="speaker">
+      </section>
+      <section id="summary"
+        class="section-wrap background-white section-top-margin"
+      >
+        <h3 class="HEAD1">開催概要</h3>
+        <div>Processing を作品制作に活用しているアーティストや
+          研究者の基調講演やライトニングトーク（一人10分程度のプレゼンテーション）等を企画しています。
+          また、初学者向けのワークショップや、インタラクティブ、グラフィック、デザイン、機械学習といった
+          様々なテーマに特化したワークショップも行います。
+          少人数に分かれての集中型のものを複数企画しており、講師と対話しながら学ぶことができますので、
+          初学者や独学者たちも奮ってご参加ください！</div>
+      </section>
+      <section id="summary-date" class="section-wrap white background-purple600">
+        <div>
           <div>
-            <h5>杉原 聡</h5>
-            <p>1977年鎌倉生まれ。コンピュテーショナル・デザイナー、建築家。コンピュテーショナル・デザイン事務所ATLV代表。<br>
-              2001年東京工業大学情報理工学研究科修了後、東京芸術大学先端芸術表現科特別講師、国際メディア研究財団研究員を経て、2003年に渡米。2006年にUCLA建築修士修了し、Greg Lynn FormやDR_D(Dagmar Richter)にてデザイナーとして勤務した後、2007年から2012年までMorphosis Architectsにてコンピュテーショナル・デザイナーとしてエマーソン大学LA校、コーネル大学ゲイツ・ホール、カサブランカ・ファイナンス・シティー・タワーなどのファサード・デザインに従事。2011年から2017年まで南カリフォルニア建築大学にて非常勤講師としてコンピュテーショナル・デザインの教育に取り組む。2011年よりコンピュテーショナル・デザインのためのオープンソース・ライブラリiGeoを開発。2012年にコンピュテーショナル・デザイン事務所ATLVを設立し、ミラノ万博中国館屋根ファサードやイスタンブール都市博物館ファサードなどの設計に携わる。2014年にACADIA最優秀論文賞受賞。2015年にパリのAA[n+1]ギャラリーで個展「Agent-Based Computational Design」開催。</p>
+            <div>日時</div>
+            <div>2020.2.20 (sat) / 21 (sun)</div>
           </div>
-        </div> -->
-      </div>
-      <div class="container" data-aos="fade-up">
-        <p class="time">11:20</p>
-        <h4>松本 昭彦「音楽とアルゴリズム ~歴史・テクノロジー・アート~」</h4>
-        <p class="txt">
-          本講演はアルゴリズミックなものの考え方を分野を限定せず応用することを目指し、音楽の作曲の世界を1例にその技法や美、創造性、芸術についての実践や展開の可能性を検証します。
-アルゴリズミックな表現は音楽の世界では古くから存在し、1950年代のレジャレン・ヒラーの時代から既にアルゴリズミックな作曲による生成音楽が存在していますが、実はコンピューターが20世紀に登場するはるか以前からその萌芽を見ることができます。<br>
-音符という離散的なデジタル表現と親和性が高い概念の組み立てにより設計されてきた音楽の歴史の中に、いかにアルゴリズムを見いだすことができ、それらをモデル化することで様々な表現に応用し技法や発想を応用できるのか、音楽の世界の外側の人たちに向けてその応用の可能性を紹介します。<br>
-        </p>
-        <!-- <div class="speaker">
-          <img class="thumb" src="./images/key_matsumoto.jpg" alt="speaker">
           <div>
-            <h5>松本 昭彦</h5>
-            <p>人間の思考や身体性に依存した感覚的作曲から離れ、プログラミング技術を駆使し徹底的にメカニカルに作曲されたピアノ曲集である1stCDアルバム 『Preludes for Piano Book1』を2016年にリリース。作曲においては常にアルゴリズミックな音楽表現を追求している。<br>
-              アーティスト活動以外ではプログラマーとして様々な大手企業の研究所での開発仕事に携わるほか、アートとテクノロジーについてのワークショッププロジェクトであるRESONANCEやAbleton and Max Community Japan、ライブイベントSOURCE CORDをオーガナイズし、雑誌PROSOUNDにてテクノロジーエンターテイメント、メディアアートに関する連載を行うなど、音や芸術に関する教育活動、コミュニティ活動、情報発信も積極的に行なっている。<br>
-              近年のライブでは演奏性や一回性にこだわりモジュラー・シンセとAbleton M4L、Cycling ’74 Max8を組み合わせたアルゴリズミックな要素を含むベースミュージックのインプロビートセットを展開している。</p>
+            <div>場所</div>
+            <div>オンライン
+              <a href="">> YouTube Live</a>
+              <a href="">> Zoom配信</a>
+            </div>
           </div>
-        </div> -->
-      </div>
-    </section>
-
-    <section id="participation">
-      <h2 data-aos="fade-up" class="hdg__lv2">Presentation</h2>
-      <div class="container" data-aos="fade-up">
-        <div class="timetable">
-          <ul>
-            <li>
-              <div class="information">
-                <p class="time">13:00</p>
-                <div class="info-container">
-                  <p class="title">イントロダクション</p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">13:10</p>
-                <div class="info-container">
-                  <p class="title">クリエイティブコーディングを仕事にする フリーランス編</p>
-                  <p class="bottom-content">
-                    <span class="category category__lt">LT</span>
-                    <span class="speaker">永松歩</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">13:25</p>
-                <div class="info-container">
-                  <p class="title">ProcessingとArduinoを用いて、取得された数値を材料に絵画を描く</p>
-                  <p class="bottom-content">
-                    <span class="category category__lt">LT</span>
-                    <span class="speaker">中村 陽菜</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">13:40</p>
-                <div class="info-container">
-                  <p class="title">プログラミング初学者向けの,p5.jsを用いた弾幕プログラミングのすすめ</p>
-                  <p class="bottom-content">
-                    <span class="category category__lt">LT</span>
-                    <span class="speaker">安田 直樹</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">13:55</p>
-                <div class="info-container">
-                  <p class="title">p5.jsでサウンドデザインツールのビジュアルを拡張する</p>
-                  <p class="bottom-content">
-                    <span class="category category__lt">LT</span>
-                    <span class="speaker">Taito Otani</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">14:10</p>
-                <div class="info-container">
-                  <p class="title">Kusabiというwebglベースのクリエイティブコーディングのためのソフトウエアを開発していることについて</p>
-                  <p class="bottom-content">
-                    <span class="category category__lt">LT</span>
-                    <span class="speaker">@moxus</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">14:25</p>
-                <div class="info-container">
-                  <p class="title">障子に穴をあけてもいいよ</p>
-                  <p class="bottom-content">
-                    <span class="category category__lt">LT</span>
-                    <span class="speaker">工藤麻祐子</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">14:40</p>
-                <div class="info-container">
-                  <p class="title">休憩</p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">15:00</p>
-                <div class="info-container">
-                  <p class="title">日常的にコードを書いて表現する</p>
-                  <p class="bottom-content">
-                    <span class="category category__talk-session">Talk Session</span>
-                    <span class="speaker">はぅ君 / nasana / Almina / 高尾俊介</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">15:45</p>
-                <div class="info-container">
-                  <p class="title">NEORT1周年の振り返りとこれからの話</p>
-                  <p class="bottom-content">
-                    <span class="category category__lt">LT</span>
-                    <span class="speaker">ニイノミ</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="information">
-                <p class="time">16:00</p>
-                <div class="info-container">
-                  <p class="title">ライブコーディング</p>
-                  <p class="bottom-content">
-                    <span class="category category__performance">Performance</span>
-                    <span class="speaker">Shihpin the Livecoder / HAUS / 田所淳</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <div>
+            <div>時間</div>
+            <div>10:30 AM - 6:00 PM</div>
+          </div>
+          <div>
+            <div>ハッシュタグ</div>
+            <div><a
+              href="https://twitter.com/intent/tweet?hashtags=PCD2021"
+              target="_blank"
+              >#PCD2021</a
+            ></div>
+          </div>
+      
         </div>
-      </div>
+      </section>
+      <section id="timetable"
+        class="section-wrap background-white section-top-margin"
+      >
+        <h3 class="HEAD1">Timetable</h3>
+        <h4 class="HEAD3">2月20日(土)</h4>
+        <div>17:00 ~ 開催あいさつ</div>
+        <div>17:05 ~ キーノート by.山辺真幸</div>
+        <div>18:00 ~ トークセッション「アーティストとして生きる（仮）」
+          by. ちにゅり、岡村綾子、菅野創、稗田（予定）
+          </div>
+      </section>
+      <section id="timetable-21" class="section-wrap background-purple500 white">
+        <h4 class="HEAD3">2月21日(日)</h4>
+        <div>ワークショップ「Generative Illustrations」：sayama (@hyappy717)</div>
+        <div>ワークショップ「ライブコーディング」： okachiho</div>
+      </section>
+      <section id="keynote" class="section-wrap background-white section-top-margin">
+        <h3 class="HEAD1">Keynote</h3>
+        <img class="profile-image" src="images/yamabe.png"/>
+        <h4 class="HEAD3">□山辺真幸 (20日)</h4>
+        <div>世界で拡大を続ける新型コロナウイルス、その終息は未だに見通せません。拡大を押さえ込む糸口を掴むためにウイルスに関する様々なビッグデータの解析が世界各国で行われています。本講演は最新研究により明らかになったウイルスの実態をビッグデータで可視化し、NHKスペシャル、クローズアップ現代＋で放送した高精細なデータ・ビジュアライズと、Processingを使用した制作舞台裏を紹介します。</div>
+      </section>
+      <section id="workshop"
+        class="section-wrap background-purple400 section-bottom-margin white"
+      >
+      <h3 class="HEAD1">Workshop</h3>
+      <img class="profile-image" src="images/sayama.png"/>
+      <h4 class="HEAD3">□サヤマ (21日)</h4>
+      <div>クリエーティブコーディングって丸や四角がならんだ抽象的な表現のイメージが強いかもしれませんが、具象的モチーフをジェネラティブに描いてみるのも面白いです。
 
-      <div class="container" data-aos="fade-up">
-          <h4>Processing作品展示 by NEORT</h4>
-          <p class="txt">
-              デジタルアートプラットフォームの<a href="https://neort.io/" target="_blank">NEORT</a>とコラボレーションした作品展示企画です。<br class="pc">
-              イベント当日までの間、NEORTにタグ「PCD2020」をつけて投稿されたProcessingやp5.jsの作品が会場で展示されます。<br>
-              みなさん、是非参加してPCD Tokyo 2020を盛り上げましょう！<br>
-              詳細は<a href="https://link.medium.com/kry8zvD5f3" target="_blank">こちら</a>。
-          </p>
+        モチーフを描画メソッドに落とし込む → パラメーターに乱数を代入して多量に生成 → つくった自分もびっくりな予想外の形や色の組み合わせが現れる（具象的だからこそ生じる、イメージと生成結果とのギャップが楽しい！）
+        
+        このようなグラフィックガチャ的なものをつくりながら、p5jsでビジュアル表現を楽しむ手法をご紹介します</div>
+      </section>
+      <section id="sponsor"
+        class="section-wrap background-white section-top-margin"
+      >
+      <h3 class="HEAD1">Sponsor</h3>
+      <div id="sponsor-section">
+        <div class="right-line"><a href=""></a>ライゾマティクス<br><span style="font-size: 2rem">真鍋大度</span></div>
+        <div class="right-line"><a href=""></a>イレブンプレイ<br><span style="font-size: 2rem">MIKIKO</span></div>
+        <div><a href="https://openprocessing.org/ "><div><img src="images/openprocessing.svg" target="_blank" alt="OpenProcessing"></div></a></div>
       </div>
-    </section>
-
-    <section id="workshop">
-      <h2 data-aos="fade-up" class="hdg__lv2">Workshop</h2>
-
-      <div id="workshop-for-kids" class="container" data-aos="fade-up">
-        <p class="time">10:00 - 12:00</p>
-        <h4>のり先生/佐藤正範「小中学生向け"お絵かきアプリ"プログラミング体験」</h4>
-        <p class="txt">
-          本ワークショップは小学校３年生〜中学生までが対象の教育用プログラミング言語Processingをはじめて触れる子どもたち向けの内容です。Processingは簡単な英単語と数字を組み合わせるだけで、コンピュータの画面で好きな絵を描かせたり、簡単なアニメーションを動かさせたりすることができるプログラミング環境です。活動では子どもたち自身がオリジナルの絵を表示させたり、簡単なオリジナルスマホアプリを作ったりします。
-        </p>
-        <!-- 東京学芸大学附属竹早小学校教諭/東京学芸大こども未来研究所学術フェロー。STEM教育/プログラミング教育を研究。札幌市出身。札幌国際芸術祭/SIAF Lab等でエンジニアやエデュケーターを務める。北海道大学教育学院修士課程修了。 -->
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <p class="time">13:00 - 14:50</p>
-        <h4>田所 淳「Teachable Machineとml5.jsとp5.jsで機械学習プログラミング入門」</h4>
-        <p class="txt">
-        このワークショップでは、Googleの開発した<a target="_blank" href="https://teachablemachine.withgoogle.com/">Teachable Machine</a>というオンラインで機械学習が可能なサイトと、p5.js、さらに機械学習のためのJavaScriptのライブラリーであるml5.jsを組み合わせて、学習させた画像や音声を利用したインタラクティブなコンテンツの作成に挑戦します。
-        </p>
-        <!-- 前橋工科大学准教授 / 東京藝術大学非常勤講師 / 慶應義塾大学非常勤講師。1972年生まれ。クリエイティブコーダー。アルゴリズムを用いた音響合成による音楽作品の創作、ラップトップコンピュータを用いた音と映像による即興演奏、インスタレーション作品の展示などを行う。著書に『Processing クリエイティブ・コーディング入門 – コードが生み出す創造表現」技術評論社 2017、『演奏するプログラミング、ライブコーディングの思想と実践 ―Show Us Your Screens』BNN新社 2018など。 -->
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <p class="time">13:00 - 14:50</p>
-        <h4>Atsushi Asakura / aadebdeb「Processingユーザーのためのシェーダーアート入門」</h4>
-        <p class="txt">
-          シェーダーは3D CGの頂点位置計算や陰影計算のためにGPUで実行されるプログラムです。このシェーダーを(本来の意図から逸脱して)使用したビジュアル表現はシェーダーアートと呼ばれ、クリエイティブコーディングの一つとして親しまれています。本ワークショップではGLSLというシェーダー言語によるシェーダーアートについて基礎からハンズオン形式で解説します。
-        </p>
-        <!-- クリエイティブコーダー、プログラマー。特に3D CG、コンピュータ・シミュレーション、ジェネラティブアートに興味がある。 -->
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <p class="time">13:00 - 14:50</p>
-        <h4>FAL「p5.js でゲーム制作」</h4>
-        <p class="txt">
-          p5.js を使ったミニゲーム作りを体験します。 何もないところから始め、ちょっとずつコードを書き足していき、最終的にはあなただけのオリジナルのゲームが作れるようになることでしょう。 いろんなゲームに共通するプログラムの作り方を知ることで、ゲームに限らず今後の作品作りに役立てられるような内容にできればと思います。
-        </p>
-        <!-- インディーゲーム開発者／クリエイティブコーダー。
-ゲーム制作のかたわら、Processing や p5.js でスケッチを作る活動を続け、Twitter や Webサイト https://www.fal-works.com/ で公開している。 -->
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <p class="time">15:00 - 16:50</p>
-        <h4>巴山竜来「群からつくるジェネラティブアート」</h4>
-        <p class="txt">
-          かたちの対称性は群という数学的構造によって表すことができます．『数学から創るジェネラティブアート』第9章をもとに，対称性と群，そこからつくるかたちについて学びます．この本では2Dグラフィックスしか扱っていませんでしたが，シェーダを使ってそれを3Dに応用する技法も紹介します．
-        </p>
-        <!-- 1982年奈良県生まれ。専門は数学(とくに複素幾何学)、および数学に関する視覚表現の実践。博士(理学)。専修大学経営学部准教授。著書『数学から創るジェネラティブアート - Processingで学ぶかたちのデザイン』(2019年)。 -->
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <p class="time">15:00 - 16:50</p>
-        <h4>ayakooo / Ayako Okamura 「Ableton × Processing - 音/MIDIに連動するグラフィック」</h4>
-        <p class="txt">
-          Ableton LiveとProcessingで、音と映像を同時制御します。Abletonは音楽制作ソフトですが、visualプログラミングとの連携も簡単に行えます。初心者でも作れるようにテンプレートを使用します。徐々に音と映像を発展させ、オリジナルのライブパフォーマンスを作りましょう。
-        </p>
-        <!-- Abletonにて、認定トレーナーとして活動 。IAMASでProcessingをはじめ、Quartz ComposerやoFでVJをしていた過去がある。現在は、AudioVisualやトラックメイクのワークショップに勤しむ。最近はマイコンシンセに興味あり。 -->
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <p class="time">15:00 - 16:50</p>
-        <h4>＠reona396「Processingでクリエイティブコーダーデビュー！」</h4>
-        <p class="txt">
-          Processingでクリエイティブコーダーデビューしてみませんか？<br>
-        本ワークショップでは、Processing初心者の方向けにプログラミングの基礎や考え方をお伝えし、クリエイティブコーディングの第一歩を踏み出すお手伝いをします。
-        </p>
-        <!-- Processingとp5.jsが大好きなインタラクションエンジニア / クリエイティブコーダー -->
-      </div>
-    </section>
-
-    <section id="ticket">
-      <h2 data-aos="fade-up" class="hdg__lv2">Ticket</h2>
-      <div class="container" data-aos="fade-up">
-        <div class="detail">
-          <dl>
-            <dt><a target="_blank" href="https://pcd2020.peatix.com/">入場チケット+WS(のり先生)</a></dt>
-            <dd>1,000円</dd>
-          </dl>
-          <dl>
-            <dt><a target="_blank" href="https://pcd2020.peatix.com/">入場チケット+WS(そのほかの講師)</a></dt>
-            <dd>3,000円</dd>
-          </dl>
-          <dl>
-            <dt><a target="_blank" href="https://pcd2020-keynote.peatix.com/">一般入場</a></dt>
-            <dd>無料</dd>
-          </dl>
-        </div>
-        <p class="attention">
-          ※ワークショップ参加についてはお一人様一を選択して受講することができます。<br>
-          ※のり先生/佐藤正範によるワークショップは小学校３年生〜中学生までが対象です。<br>
-          ※のり先生/佐藤正範によるワークショップは20人、そのほかのワークショップは1コマ15人が参加可能です。<br>
-        </p>
-      </div>
-    </section>
-    <section id="sns">
-      <ul data-aos="fade-up">
-        <li>
-          <img src="./images/twitter02.png" alt="">
-          <a class="twitter-timeline" data-theme="dark" data-height="522" href="https://twitter.com/PCD_Tokyo?ref_src=twsrc%5Etfw">Tweets
-            by PCD_Tokyo</a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </li>
-        <!-- facebook -->
-        <!-- <li>
+      </section>
+      <section id="sns" class="section-wrap background-purple300 white section-bottom-margin">
+        <h3 class="HEAD1">Twitter</h3>
+        <ul>
+          <li>
+            <img src="./images/twitter02.png" alt="" />
+            <a
+              class="twitter-timeline"
+              data-theme="dark"
+              data-height="522"
+              href="https://twitter.com/PCD_Tokyo?ref_src=twsrc%5Etfw"
+              >Tweets by PCD_Tokyo</a
+            >
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </li>
+          <!-- facebook -->
+          <!-- <li>
           <img src="./images/facebook02.png" alt="">
         </li> -->
-      </ul>
-    </section>
-  </main>
-  <footer class="footer">
-    <small>&copy; PCD Tokyo</small>
-  </footer>
-</body>
-
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <small>&copy; PCD Tokyo</small>
+    </footer>
+    <script src="bg-canvas.js"></script>
+  </body>
 </html>
