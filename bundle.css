@@ -18,7 +18,14 @@
   font-size: 36px;
   letter-spacing: 0.2rem;
   line-height: 1.67;
-  margin: 0.4rem;
+  margin: 1rem auto;
+}
+
+.HEAD4 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 2rem auto;
 }
 
 .white {
@@ -583,7 +590,7 @@ flex-basis: 50%;
 
 .section-wrap img.profile-image{
   position: absolute;
-  top: 9rem;
+  top: 11rem;
   right: 5rem;
   width: 72px;
 }
