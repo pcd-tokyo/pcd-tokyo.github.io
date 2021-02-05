@@ -614,6 +614,7 @@ ul {
 @media screen and (max-width: 769px) {
   .HEAD1 {
     font-size: 54px;
+    letter-spacing: 0rem;
   }
 
   .HEAD2 {
