@@ -542,6 +542,7 @@ ul {
   z-index: -2;
   top: 0;
   left: 0;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 .section-wrap {
   position: relative;
@@ -651,6 +652,7 @@ ul {
     width: auto;
     margin-left: 1rem;
     margin-right: 2rem;
+    font-size: 18px;
   }
   .section-wrap {
     width: auto;
