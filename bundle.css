@@ -336,7 +336,7 @@ body {
   font-weight: regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #000;
+  background-color: var(--main-purple);
   font-size: 18px;
   -webkit-font-feature-settings: "palt";
   font-feature-settings: "pwid";
@@ -509,7 +509,7 @@ ul {
   display: flex;
   width: 92%;
   margin: auto;
-  z-index: 1;
+  z-index: 3;
   top: 50%;
   left: 1rem;
   transform: translateY(-50%);
@@ -542,6 +542,7 @@ ul {
   z-index: -2;
   top: 0;
   left: 0;
+  height: 100vh;
   padding-bottom: env(safe-area-inset-bottom);
 }
 .section-wrap {
