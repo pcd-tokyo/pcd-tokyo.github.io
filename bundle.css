@@ -432,13 +432,22 @@ ul {
   border-bottom: none;
   margin-right: 0.5rem;
 }
+.link-to-twitter{
+  background-color: var(--gallery-link);
+  box-shadow: 8px 8px var(--shadow-purple);
+  padding: 1rem;
+  height: 60px;
+}
+.link-to-twitter img{
+  height: 100%;
+}
 #G1{
   flex:5;
 }
 #G2{
   flex: 4;
 }
-.link-to-gallery:hover {
+.link-to-gallery:hover, .link-to-twitter:hover {
   background-color: var(--gallery-red);
   opacity: 1;
 }
@@ -620,6 +629,9 @@ ul {
   justify-content: center;
   align-items: center;
 }
+#sponsor-section a{
+  color: black;
+}
 #sponsor-section div {
   flex: 1;
   text-align: center;
@@ -643,11 +655,11 @@ ul {
 }
 #timetable-13 img{
 width: 24px;
-background-color: var(--sketch-ocean);
+background-color: var(--sketch-pink);
 }
 #timetable-13 img:hover{
   width: 24px;
-  background-color: var(--sketch-sky);
+  background-color: var(--sketch-red);
   }
 
 .section-wrap img.profile-image {
@@ -656,6 +668,10 @@ background-color: var(--sketch-ocean);
   right: 0.8rem;
   width: 96px;
   box-shadow: 8px 8px var(--shadow-purple);
+  cursor: pointer;
+}
+.section-wrap img.profile-image:hover, #profile-image-group .group-image:hover {
+  box-shadow: 8px 8px var(--sketch-sky);
 }
 
 .section-wrap #profile-image-group {
@@ -737,7 +753,7 @@ background-color: var(--sketch-ocean);
   #gallery{
     top: auto;
     left: 0;
-    bottom: 7%;
+    bottom: 6%;
     width: auto;
   }
   .link-to-gallery {
@@ -757,6 +773,7 @@ background-color: var(--sketch-ocean);
 
   #sponsor-section {
     flex-direction: column;
+    color: black;
   }
   #sponsor-section div {
     margin: 2rem auto;
@@ -770,6 +787,7 @@ background-color: var(--sketch-ocean);
     top: auto;
     right: auto;
   }
+
   .section-wrap #profile-image-group{
     position: relative;
     height: 70px;
