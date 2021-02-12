@@ -1,259 +1,264 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="content-language" content="ja" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no,address=no,email=no" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta property="og:title" content="Processing Community Day Japan" />
-    <meta
-      property="og:description"
-      content="2021年2月20・21日オンライン開催！Processing Community Day Japan 2021"
-    />
-    <meta property="og:url" content="https://pcd-tokyo.github.io" />
-    <meta
-      property="og:image"
-      content="https://pcd-tokyo.github.io/images/ogp.png"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="fb:app_id" content="517860032058420" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="Processing Community Day Tokyo" />
-    <meta name="twitter:title" content="Processing Community Day Tokyo" />
-    <meta
-      name="twitter:description"
-      content="2021年2月20・21日オンライン開催！Processing Community Day Japan 2021"
-    />
-    <meta
-      name="twitter:image"
-      content="https://pcd-tokyo.github.io/images/ogp.png"
-    />
-    <title>Processing Community Day Japan 2021</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="bundle.css" />
-    <script
-      language="javascript"
-      type="text/javascript"
-      src="libraries/p5.min.js"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Noto+Sans+JP&display=swap&amp;subset=japanese"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400;1,600&display=swap" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-131682964-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-131682964-1");
-    </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500&display=swap");
-    </style>
-  </head>
 
-  <body>
-    <header class="header">
-      <section id="hero" class="hero">
-        <nav class="navigation">
-          <ul>
-            <a href="#about"><li><span class="c1">P</span>CDとは</li></a>
-            <a href="#summary"><li><span class="c1">開</span>催概要</li></a>
-            <a href="#timetable"><li><span class="c1">タ</span>イムテーブル</li></a>
-            <a href="#keynote"><li><span class="c1">キ</span>ーノート</li></a>
-            <a href="#workshop"><li><span class="c1">ワ</span>ークショップ</li></a>
-            <a href="#sponsor"><li><span class="c1">ス</span>ポンサー</li></a>
-          </ul>
-        </nav>
-        <div id="bgcanvas"></div>
-        <div id="background"></div>
-        <div id="shadow-image"><img src="images/logo-2021.svg" /></div>
-        <div id="p5canvas"></div>
-        <!-- https://pcd-tokyo-gallery.vercel.app/ -->
-        <div id="gallery"><a id="link-to-gallery" href="" target="_blank"><img src="images/gallery.svg">作品ギャラリー準備中</a></div>
-        <div id="notice">2/<span id="date">20, 21</span><span id="online">@Online</span></div>
-      </section>
-    </header>
-    <!-- /header -->
-    <main class="main">
-      <section id="about" class="section-wrap background-white section-top-margin">
-        <h3 class="HEAD1">PCDとは</h3>
-        <div>
-         PCDとは、Processing Community Day(プロセッシング・コミュニティー・デー)の略です。<br>
-          Processing のユーザーの交流イベントで、アートとプログラミングのコミュニティの多様性を祝って
-          世界各地で開催されています。<br>
-          日本では ライゾマティクス 真鍋大度 様、イレブンプレイ MIKIKO 様、OpenProcessing 様の協力のもと、2021年2月20・21日に オンライン にて開催されます。<br>
-          Processing のパイオニアや若手アーティストらによる講演やワークショップを通じて、<br class="pc">
-          クリエイティブなハックやアートに直に触れることができます。</div>
-        <p class="link">
-          &gt;
-          <a
-            href="https://processingfoundation.org/advocacy/processing-community-day-2020"
-            >Processing Community Day Worldwide</a
-          ><br />
-          <a href="https://pcd-tokyo.github.io/2020/">> PCD Tokyo 2020 ウェブサイト</a>
-          <br>
-          &gt;
-          <a href="https://pcd-tokyo.github.io/2019" target="_blank"
-            >PCD Tokyo 2019 ウェブサイト</a
-          ><br />
-          &gt;
-          <a
-            href="https://note.com/naoto_hieda/n/n9701649bba32"
-            target="_blank"
-            >PCD Tokyo 2019 レポート（稗田）</a
-          ><br />
-          &gt;
-          <a href="https://ayumu-nagamatsu.com/archives/875/" target="_blank"
-            >PCD Tokyo 2019 レポート（永松）</a
-          >
-        </p>
-      </section>
-      <section id="about-processing" class="section-wrap white background-purple700"><h4 class="HEAD2">Processingとは</h4>
-        <div>マサチューセッツ工科大学メディアラボ発祥の教育用プログラミング言語で、世界中で親しまれています。プログラミングの入門だけでなく、メディア・アートや科学研究など幅広い分野で用いられています。</div>
-        <p class="link">
-          &gt; <a href="https://processing.org/" target="_blank">Processing</a
-          ><br />
-          &gt;
-          <a href="https://processingfoundation.org/" target="_blank"
-            >Processing Foundation</a
-          >
-        </p>
-      </section>
-      <section id="summary"
-        class="section-wrap background-white section-top-margin"
-      >
-        <h3 class="HEAD1">開催概要</h3>
-        <div>Processing を作品制作に活用しているアーティストや
-          研究者の基調講演やライトニングトーク（一人10分程度のプレゼンテーション）等を企画しています。
-          また、初学者向けのワークショップや、インタラクティブ、グラフィック、デザイン、機械学習といった
-          様々なテーマに特化したワークショップも行います。
-          少人数に分かれての集中型のものを複数企画しており、講師と対話しながら学ぶことができますので、
-          初学者や独学者たちも奮ってご参加ください！</div>
-      </section>
-      <section id="summary-date" class="section-wrap white background-purple600">
-        <div>
-          <div class="margin-bottom-small">
-            <div>日時</div>
-            <div style="font-size: 2rem; font-weight: 600;">2021.2.20 (sat) / 21 (sun)</div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-language" content="ja" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no,address=no,email=no" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta property="og:title" content="Processing Community Day Japan" />
+  <meta property="og:description" content="2021年2月20・21日オンライン開催！Processing Community Day Japan 2021" />
+  <meta property="og:url" content="https://pcd-tokyo.github.io" />
+  <meta property="og:image" content="https://pcd-tokyo.github.io/images/ogp.png" />
+  <meta property="og:type" content="website" />
+  <meta property="fb:app_id" content="517860032058420" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="Processing Community Day Tokyo" />
+  <meta name="twitter:title" content="Processing Community Day Tokyo" />
+  <meta name="twitter:description" content="2021年2月20・21日オンライン開催！Processing Community Day Japan 2021" />
+  <meta name="twitter:image" content="https://pcd-tokyo.github.io/images/ogp.png" />
+  <title>Processing Community Day Japan 2021</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="bundle.css" />
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Noto+Sans+JP&display=swap&amp;subset=japanese"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400;1,600&display=swap"
+    rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131682964-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-131682964-1");
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500&display=swap");
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <section id="hero" class="hero">
+      <nav class="navigation">
+        <ul>
+          <a href="#about">
+            <li><span class="c1">P</span>CDとは</li>
+          </a>
+          <a href="#summary">
+            <li><span class="c1">開</span>催概要</li>
+          </a>
+          <a href="#timetable">
+            <li><span class="c1">タ</span>イムテーブル</li>
+          </a>
+          <a href="#keynote">
+            <li><span class="c1">キ</span>ーノート</li>
+          </a>
+          <a href="#workshop">
+            <li><span class="c1">ワ</span>ークショップ</li>
+          </a>
+          <a href="#sponsor">
+            <li><span class="c1">ス</span>ポンサー</li>
+          </a>
+        </ul>
+      </nav>
+      <div id="bgcanvas"></div>
+      <div id="background"></div>
+      <div id="shadow-image"><img src="images/logo-2021.svg" /></div>
+      <div id="p5canvas"></div>
+      <!-- https://pcd-tokyo-gallery.vercel.app/ -->
+      <div id="gallery">
+        <a class="link-to-gallery" id="G1" href="https://pcd-japan-gallery.vercel.app/" target="_blank"><img src="images/gallery.svg">PCD Japan Gallery</a>
+        <a class="link-to-gallery" id="G2" href="https://pcd2021-3d-gallery.github.io/" target="_blank"><img src="images/gallery.svg">3D Gallery</a>
+      </div>
+      <div id="notice">2/<span id="date">20, 21</span><span id="online">@Online</span></div>
+    </section>
+  </header>
+  <!-- /header -->
+  <main class="main">
+    <section id="about" class="section-wrap background-white section-top-margin">
+      <h3 class="HEAD1">PCDとは</h3>
+      <div>
+        PCDとは、Processing Community Day(プロセッシング・コミュニティー・デー)の略です。<br>
+        Processing のユーザーの交流イベントで、アートとプログラミングのコミュニティの多様性を祝って
+        世界各地で開催されています。<br>
+        日本では ライゾマティクス 真鍋大度 様、イレブンプレイ MIKIKO 様、OpenProcessing 様の協力のもと、2021年2月20・21日に オンライン にて開催されます。<br>
+        Processing のパイオニアや若手アーティストらによる講演やワークショップを通じて、<br class="pc">
+        クリエイティブなハックやアートに直に触れることができます。</div>
+      <p class="link">
+        &gt;
+        <a href="https://processingfoundation.org/advocacy/processing-community-day-2020">Processing Community Day
+          Worldwide</a><br />
+        <a href="https://pcd-tokyo.github.io/2020/">> PCD Tokyo 2020 ウェブサイト</a>
+        <br>
+        &gt;
+        <a href="https://pcd-tokyo.github.io/2019" target="_blank">PCD Tokyo 2019 ウェブサイト</a><br />
+        &gt;
+        <a href="https://note.com/naoto_hieda/n/n9701649bba32" target="_blank">PCD Tokyo 2019 レポート（稗田）</a><br />
+        &gt;
+        <a href="https://ayumu-nagamatsu.com/archives/875/" target="_blank">PCD Tokyo 2019 レポート（永松）</a>
+      </p>
+    </section>
+    <section id="about-processing" class="section-wrap white background-purple700">
+      <h4 class="HEAD2">Processingとは</h4>
+      <div>マサチューセッツ工科大学メディアラボ発祥の教育用プログラミング言語で、世界中で親しまれています。プログラミングの入門だけでなく、メディア・アートや科学研究など幅広い分野で用いられています。</div>
+      <p class="link">
+        &gt; <a href="https://processing.org/" target="_blank">Processing</a><br />
+        &gt;
+        <a href="https://processingfoundation.org/" target="_blank">Processing Foundation</a>
+      </p>
+    </section>
+    <section id="summary" class="section-wrap background-white section-top-margin">
+      <h3 class="HEAD1">開催概要</h3>
+      <div>Processing を作品制作に活用しているアーティストや
+        研究者の基調講演やライトニングトーク（一人10分程度のプレゼンテーション）等を企画しています。
+        また、初学者向けのワークショップや、インタラクティブ、グラフィック、デザイン、機械学習といった
+        様々なテーマに特化したワークショップも行います。
+        少人数に分かれての集中型のものを複数企画しており、講師と対話しながら学ぶことができますので、
+        初学者や独学者たちも奮ってご参加ください！</div>
+    </section>
+    <section id="summary-date" class="section-wrap white background-purple600">
+      <div>
+        <div class="margin-bottom-small">
+          <div>日時</div>
+          <div style="font-size: 2rem; font-weight: 600;">2021.2.20 (sat) / 21 (sun)</div>
+        </div>
+        <div class="margin-bottom-small">
+          <div>場所</div>
+          <div style="font-size: 2rem; font-weight: 600;">オンライン
+            <a href="https://www.youtube.com/watch?v=HT5Ff4lX4Ds" target="_blank">> YouTube Live</a>
+            <a>> Zoom配信（チケット申込者に別途連絡します）</a>
           </div>
-          <div class="margin-bottom-small">
-            <div>場所</div>
-            <div style="font-size: 2rem; font-weight: 600;">オンライン
-              <a href="">> YouTube Live（準備中）</a>
-              <a href="">> Zoom配信（準備中）</a>
-            </div>
-          </div>
-          <!-- <div class="margin-bottom-small">
+        </div>
+        <!-- <div class="margin-bottom-small">
             <div>時間</div>
             <div style="font-size: 2rem; font-weight: 600;">10:30 AM - 6:00 PM</div>
           </div> -->
-          <div class="margin-bottom-small">
-            <div>ハッシュタグ</div>
-            <div style="font-size: 2rem; font-weight: 600;"><a
-              href="https://twitter.com/intent/tweet?hashtags=PCD2021"
-              target="_blank"
-              >#PCD2021</a
-            ></div>
-          </div>
-      
+        <div class="margin-bottom-small">
+          <div>ハッシュタグ</div>
+          <div style="font-size: 2rem; font-weight: 600;"><a href="https://twitter.com/intent/tweet?hashtags=PCD2021"
+              target="_blank">#PCD2021</a></div>
         </div>
+
+      </div>
+    </section>
+    <section id="timetable" class="section-wrap background-white section-top-margin">
+      <h3 class="HEAD1">Timetable</h3>
       </section>
-      <section id="timetable"
-        class="section-wrap background-white section-top-margin"
-      >
-        <h3 class="HEAD1">Timetable</h3>
-        <h4 class="HEAD3">2月20日(土)</h4>
-        <div>coming soon...</div>
-        <!-- <div>17:00 ~ 開催あいさつ</div>
-        <div>17:05 ~ キーノート by.山辺真幸</div>
-        <div>18:00 ~ トークセッション「アーティストとして生きる（仮）」
-          by. ちにゅり、岡村綾子、菅野創、稗田（予定）
-          </div> -->
-      </section>
-      <section id="timetable-21" class="section-wrap background-purple500 white">
-        <h4 class="HEAD3">2月21日(日)</h4>
-        <div>coming soon...</div>
-        <!-- <div>ワークショップ「Generative Illustrations」：sayama (@hyappy717)</div>
-        <div>ワークショップ「ライブコーディング」： okachiho</div> -->
-      </section>
-      <section id="keynote" class="section-wrap background-white section-top-margin">
-        <h3 class="HEAD1">Keynote</h3>
-        <img class="profile-image" src="images/yamabe.png"/>
-        <h4 class="HEAD4">□山辺真幸 (20日)</h4>
-        <h5 class="HEAD3">新型コロナの実像をビッグデータで映し出すーProcessingによるデータ・ビジュアライズー</h5>
-        <div>世界で拡大を続ける新型コロナウイルス、その終息は未だに見通せません。拡大を押さえ込む糸口を掴むためにウイルスに関する様々なビッグデータの解析が世界各国で行われています。本講演は最新研究により明らかになったウイルスの実態をビッグデータで可視化し、NHKスペシャル、クローズアップ現代＋で放送した高精細なデータ・ビジュアライズと、Processingを使用した制作舞台裏を紹介します。</div>
-      </section>
-      <section id="workshop"
-        class="section-wrap background-purple400 section-bottom-margin white"
-      >
+    <section id="timetable-13" class="section-wrap background-purple100 white">
+      <h4 class="HEAD3">2月13日(土)~</h4>
+      <div>デイリーコーディング + 3D Gallery : #PCD2021をつけて作品をtwitterで投稿すると3D空間に展示されます <a href="https://pcd2021-3d-gallery.github.io/" target="_blank"><img src="images/gallery.svg"></a></div>
+      <div>PCD Japan Gallery : 誰でも作品を投稿できます。みんなの作品を覗いてみよう<a href="https://pcd-japan-gallery.vercel.app/" target="_blank"><img src="images/gallery.svg"></a>
+      </div>
+    </section>
+    <section id="timetable-20" class="section-wrap background-white">
+      <h4 class="HEAD3">2月20日(土)</h4>
+      <div>17:00 ~ 18:00 キーノート by.山辺真幸</div>
+      <div>18:00 ~ 19:00 トークセッション～自分らしくクリエイティブな活動をするには～ by.ayakooo, ちにゅり, 菅野創
+      </div>
+    </section>
+    <section id="timetable-21" class="section-wrap background-purple500 white">
+      <h4 class="HEAD3">2月21日(日)</h4>
+      <div>13:00 ~ 15:00ワークショップ「Generative Illustrations」by.サヤマ</div>
+      <div>18:00 ~ 19:00 ワークショップ「ライブコーディング」 by.岡千穂</div>
+    </section>
+
+    <!-- Keynote -->
+    <section id="keynote" class="section-wrap background-white section-top-margin">
+      <h3 class="HEAD1">Keynote</h3>
+    </section>
+    <section id="talksession" class="section-wrap background-purple400 white section-bottom-margin">
+      <!-- TODO：画像変更 -->
+      <img class="profile-image" src="images/yamabe.png" />
+      <h4 class="HEAD4">■山辺真幸 (20日/17:00~)</h4>
+      <h5 class="HEAD3">新型コロナの実像をビッグデータで映し出すーProcessingによるデータ・ビジュアライズー</h5>
+      <div>
+        世界で拡大を続ける新型コロナウイルス、その終息は未だに見通せません。拡大を押さえ込む糸口を掴むためにウイルスに関する様々なビッグデータの解析が世界各国で行われています。本講演は最新研究により明らかになったウイルスの実態をビッグデータで可視化し、NHKスペシャル、クローズアップ現代＋で放送した高精細なデータ・ビジュアライズと、Processingを使用した制作舞台裏を紹介します。
+      </div>
+    </section>
+
+    <!-- Talk Session -->
+    <section id="talksession" class="section-wrap background-white section-top-margin">
+      <h3 class="HEAD1">Talk Session</h3>
+    </section>
+    <section id="talksession" class="section-wrap background-purple300 white section-bottom-margin">
+      <div id="profile-image-group"><img class="group-image" src="images/ayakooo.jpg" /><img class="group-image" src="images/chinyuri.jpg" /><img class="group-image" src="images/so.jpg" /></div>
+      <h4 class="HEAD4">■ayako, ちにゅり, 菅野創(20日/18:00~)</h4>
+      <h5 class="HEAD3">～自分らしくクリエイティブな活動をするには～
+      </h5>
+      <div>
+        電子音楽やイラスト、メディアアートなどさまざまな分野で活躍している旬のクリエイター三名をゲストに迎え、先のわからないこの時代にクリエイティブな活動を続けていくにはどうしたらいいのか、司会のひえだが率直な疑問をぶつけていきます。進路に悩んでいる学生のみなさん、クリエイティブ・コーディングを生かしたキャリアプランに興味を持っているみなさん必見です！
+      </div>
+    </section>
+
+    <!-- Workshop -->
+    <section id="workshop" class="section-wrap background-white section-top-margin">
       <h3 class="HEAD1">Workshop</h3>
-      <img class="profile-image" src="images/sayama.png"/>
-      <h4 class="HEAD4">□サヤマ (21日)</h4>
+    </section>
+    <section id="workshop" class="section-wrap background-purple200 white">
+      <img class="profile-image" src="images/sayama.png" />
+      <h4 class="HEAD4">■サヤマ (21日/13:00~)</h4>
       <h5 class="HEAD3">Generative Illustrations ／ p5jsでグラフィックガチャをつくる
       </h5>
       <div>クリエーティブコーディングって丸や四角がならんだ抽象的な表現のイメージが強いかもしれませんが、具象的モチーフをジェネラティブに描いてみるのも面白いです。
 
         モチーフを描画メソッドに落とし込む → パラメーターに乱数を代入して多量に生成 → つくった自分もびっくりな予想外の形や色の組み合わせが現れる（具象的だからこそ生じる、イメージと生成結果とのギャップが楽しい！）
-        
+
         このようなグラフィックガチャ的なものをつくりながら、p5jsでビジュアル表現を楽しむ手法をご紹介します</div>
-      </section>
-      <section id="sponsor"
-        class="section-wrap background-white section-top-margin"
-      >
+    </section>
+    <section id="workshop" class="section-wrap background-purple100 section-bottom-margin white">
+      <img class="profile-image" src="images/okachiho.jpg" />
+      <h4 class="HEAD4">■岡千穂 (21日)</h4>
+      <h5 class="HEAD3">TidalCyclesワークショップ「MiniTidalサバト」
+      </h5>
+      <div>これはTidalCyclesのサブセット（a.k.a.
+        簡単バージョン）であるMiniTidalと数字の６を使ったオンライン・ワークショップ集会です。Estuaryというブラウザで開けるプラットフォーム、MiniTidal（a.k.a.
+        簡単バージョン）、数字は６しか使わないので、今までにコードを書いたことがない魔女でも大丈夫。インストールも必要ありません。
+        ※Google Chrome、イヤホン・ヘッドホン推奨</div>
+    </section>
+
+
+    <section id="sponsor" class="section-wrap background-white section-top-margin">
       <h3 class="HEAD1">Sponsor</h3>
       <div id="sponsor-section">
         <div class="right-line"><a href=""></a>ライゾマティクス<br><span style="font-size: 2rem">真鍋大度</span></div>
         <div class="right-line"><a href=""></a>イレブンプレイ<br><span style="font-size: 2rem">MIKIKO</span></div>
-        <div><a href="https://openprocessing.org/ "><div><img src="images/openprocessing.svg" target="_blank" alt="OpenProcessing"></div></a></div>
+        <div><a href="https://openprocessing.org/ ">
+            <div><img src="images/openprocessing.svg" target="_blank" alt="OpenProcessing"></div>
+          </a></div>
       </div>
-      </section>
-      <section id="sns" class="section-wrap background-purple300 white section-bottom-margin">
-        <h3 class="HEAD1">Twitter</h3>
-        <ul>
-          <li>
-            <img src="./images/twitter02.png" alt="" />
-            <a
-              class="twitter-timeline"
-              data-theme="dark"
-              data-height="522"
-              href="https://twitter.com/PCD_Tokyo?ref_src=twsrc%5Etfw"
-              >Tweets by PCD_Tokyo</a
-            >
-            <script
-              async
-              src="https://platform.twitter.com/widgets.js"
-              charset="utf-8"
-            ></script>
-          </li>
-          <!-- facebook -->
-          <!-- <li>
+    </section>
+    <section id="sns" class="section-wrap background-purple300 white section-bottom-margin">
+      <h3 class="HEAD1">Twitter</h3>
+      <ul>
+        <li>
+          <img src="./images/twitter02.png" alt="" />
+          <a class="twitter-timeline" data-theme="dark" data-height="522"
+            href="https://twitter.com/PCD_Tokyo?ref_src=twsrc%5Etfw">Tweets by PCD_Tokyo</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </li>
+        <!-- facebook -->
+        <!-- <li>
           <img src="./images/facebook02.png" alt="">
         </li> -->
-        </ul>
-      </section>
-    </main>
-    <footer class="footer">
-      <small>&copy; PCD Tokyo</small>
-    </footer>
-    <script src="bg-canvas.js"></script>
-  </body>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <small>&copy; PCD Tokyo</small>
+  </footer>
+  <script src="bg-canvas.js"></script>
+</body>
+
 </html>
