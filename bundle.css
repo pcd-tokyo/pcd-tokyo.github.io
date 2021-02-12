@@ -667,6 +667,7 @@ background-color: var(--sketch-ocean);
 
 #profile-image-group .group-image{
   width: 70px;
+  height: auto;
   box-shadow: 8px 8px var(--shadow-purple);
 }
 
