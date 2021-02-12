@@ -772,6 +772,7 @@ background-color: var(--sketch-ocean);
   }
   .section-wrap #profile-image-group{
     position: relative;
+    height: 70px;
     top: auto;
     right: auto;
   }
