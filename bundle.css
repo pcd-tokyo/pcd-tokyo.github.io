@@ -77,6 +77,31 @@
   background-color: #613fbc;
 }
 
+.background-orange100 {
+  background-color: #ABB11F;
+}
+
+.background-orange200 {
+  background-color: #B1A01F;
+}
+
+.background-orange300 {
+  background-color: #B16E1F;
+}
+.background-orange400 {
+  background-color: #B15D1F;
+}
+
+.background-orange500 {
+  background-color: #B74827;
+}
+.background-orange600 {
+  background-color: #BF4731;
+}
+.background-orange700 {
+  background-color: #CC4040;
+}
+
 :root {
   --shadow-purple: #443aa8;
   --main-purple: #1d1569;
@@ -87,6 +112,13 @@
   --purple300: #d548bf;
   --purple200: #d54889;
   --purple100: #d5485e;
+  --orange700: #CC4040;
+  --orange600: #BF4731;
+  --orange500: #B74827;
+  --orange400: #B15D1F;
+  --orange300: #B16E1F;
+  --orange200: #B1A01F;
+  --porange100: #ABB11F;
   --gallery-red: #ff006b;
   --gallery-link: #ffc2a7;
   --sketch-red: #ff006b;
@@ -546,6 +578,8 @@ ul {
   top: 0;
   left: 0;
   background-color: var(--main-purple);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 #bgcanvas {
@@ -555,6 +589,7 @@ ul {
   top: 0;
   left: 0;
   height: 100vh;
+  padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
 .section-wrap {
@@ -598,6 +633,23 @@ ul {
   width: 54px;
 }
 
+.tt{
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.sd{
+  font-size: 2rem;
+  font-weight: 600;
+}
+#timetable-13 img{
+width: 24px;
+background-color: var(--sketch-ocean);
+}
+#timetable-13 img:hover{
+  width: 24px;
+  background-color: var(--sketch-sky);
+  }
+
 .section-wrap img.profile-image {
   position: absolute;
   top: 1rem;
@@ -635,6 +687,16 @@ ul {
   }
   .link-to-gallery {
     margin-right: 1rem;
+  }
+  
+  .tt{
+    font-size: 1.44rem;
+    display: block;
+    margin-top: 0.6rem;
+    font-weight: bold;
+  }
+  .sd{
+    font-size: 1.44rem;
   }
 }
 
@@ -707,20 +769,23 @@ ul {
     top: auto;
     right: auto;
   }
+  .section-wrap #profile-image-group{
+    position: relative;
+    top: auto;
+    right: auto;
+  }
 }
 
 .footer {
   width: 100%;
-  background-color: var(--purple200);
-  height: 3.90625vw;
+  background-color: var(--orange400);
+  height: 2rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-}
-.footer small {
-  color: #fff;
-  font-size: 1.41pxvw;
+  padding-bottom: env(safe-area-inset-bottom);
+  color: white;
 }
